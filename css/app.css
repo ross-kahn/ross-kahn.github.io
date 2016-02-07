@@ -1,0 +1,145 @@
+
+body{
+	background-image: url("../resources/ignasi_pattern_s.png");
+	font-size: 20px;
+}
+
+
+
+a.external{
+	text-decoration: underline;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #000;
+    color: #FFC0CB;
+}
+
+/* Biography Section */
+#bio-image{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.icon{
+	height: 35px;
+	width: 35px;
+}
+
+.icon.insta{
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+}
+.bio-description{
+
+}
+
+.intro-content{
+	background-color: #EBEBEB;
+	padding-bottom: 4.5em;
+	border-bottom: 2px solid #444;
+}
+
+.bio-description.text{
+	
+}
+
+/* education */
+.education{
+	padding-top: 4.5em;
+	background-color: #EBEBEB;
+	padding-bottom: 4.5em;
+	border-bottom: 2px solid #444;
+}
+.section-title{
+	border-bottom: 1px dotted black;
+}
+
+.minor{
+	margin-bottom: 2em;
+	float: left;
+}
+.minor > p.lead{
+	margin-bottom: 0px !important;
+}
+
+.minor > p.title{
+	font-size: 1.5em;
+}
+
+.minor.details > p.title{
+	font-size: 2.5em;
+}
+
+/* Certification Main Details */
+.cert-row{
+	width: 100%;
+}
+
+.degree-logo{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+}
+
+.cert-container{
+	width: auto;
+	height: auto;
+	margin: 1em;
+	margin-right: 2em;
+	float: left;
+}
+
+.cert-details{
+	width: 100px;
+	height: inherit;
+	float: left;
+}
+
+.cert-details > div{
+	padding: 5px 0px 2px 0px;
+}
+
+div.cert-source{
+	text-align: center;
+
+}
+div.cert-image{
+	text-align: center;	
+}
+
+div.cert-image > img{
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+div.cert-title{
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Extra Details*/
+.cert-extra-details{
+	height: auto;
+	width: auto;
+	float: left;
+}
+
+.cert-extra-details {
+	padding-top: 2em;
+}
+
+.cert-extra-details > ul{
+	padding-left: 1em;
+}
+
+/* Footer */
+.main-foot{
+	border-top: 1px solid #444;
+	padding: 2.25em;
+	color: #444;
+}
+
+
