@@ -30,7 +30,7 @@ function createCertElements(){
 
 	var epic3 = createSingleCert("Epic",epicLogoPath,".NET / C# Programming",["HTML5","CSS3","C#","Visual Studio 2013"]);
 	
-	$("#Epic-Certs").append(epic1).append(epic2).append(epic3);
+	//$("#Epic-Certs").append(epic1).append(epic2).append(epic3);
 }
 
 function createSingleCert(certSourceName, certImagePath, certTitleName, extraDetailsList){

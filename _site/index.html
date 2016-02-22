@@ -40,7 +40,7 @@
 		</div>
 		-->
 		
-		<div class="debug container">
+		<div class="container debug">
 			<div class="row">
 				<div class="col-xs-12 visible-xs">
 					<p>Extra Small</p>
@@ -57,22 +57,22 @@
 			</div>
 		</div>
 		
-		<div class="first container">
+		<div class="container first">
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-1">
 					<div>
-						<img class="bio-image" src="resources\ross_pic2.jpg" />
+						<img id="bio-image" src="resources\ross_pic2.jpg" />
 					</div>
 				</div>
 			</div>
-			<div class="intro-content row">
+			<div class="bio-content row">
 				<div class="col-xs-1 hidden-xs">
 					<i class="section glyphicon glyphicon-arrow-up"></i>
 				</div>
 				<div class="col-xs-12 col-sm-11 bio-description">
 					<h1>
-						<span class="bio-name">Ross Kahn</span>
-						<span class="bio-icons">
+						<span id="bio-name">Ross Kahn</span>
+						<span id="bio-icons">
 							<img class="icon round" src="resources\icons\linkedin.png"/>
 							<img class="icon" src="resources\icons\github.png"/>
 							<img class="icon" src="resources\icons\spotify.png"/>
@@ -81,7 +81,7 @@
 					</h1>
 				</div>
 				<div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1">
-					<p class="intro-text">I'm a software engineer and usability designer interested in process & project management, and practical, purpose-driven products built around the user. I'm currently a developer at <a class="external" href="http://www.epic.com/about-index.php">Epic</a>.</p>
+					<p id="bio-intro">I'm a software engineer and usability designer interested in process & project management, and practical, purpose-driven products built around the user. I'm currently a developer at <a class="external" href="http://www.epic.com/about-index.php">Epic</a>.</p>
 				</div>
 			</div>
 			<div>
@@ -101,28 +101,28 @@
 			</div>
 			
 			
-			<div class="education row">
+			<div class="row education">
 				<div class="main col-md-7 col-sm-11 col-sm-offset-1 col-xs-12">
 					<div class="edu-text">        
-						<p class="lead">Bachelor of Science in</p>
-						<p class="title">Software Engineering</p>
+						<p class="edu-lead">Bachelor of Science in</p>
+						<p class="edu-title">Software Engineering</p>
 					</div>
 					<div class="edu-text">        
-						<p class="lead">from the</p>
-						<p class="title">Rochester Institute of Technology</p>
+						<p class="edu-lead">from the</p>
+						<p class="edu-title">Rochester Institute of Technology</p>
 					</div>
 				</div>
-				<div class="education col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1 col-xs-12">
-					<div class="main edu-text">        
-						<p class="lead">Graduated</p>
-						<p class="details">May 2014</p>
+				<div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1 col-xs-12">
+					<div class="edu-text main">        
+						<p class="edu-lead">Graduated</p>
+						<p class="edu-details">May 2014</p>
 						<div class="hidden-sm hidden-xs">
 							<span class="section-border small"></span>
 						</div>
 					</div>
-					<div class="edu-text">        
-						<p class="lead">Cumulative GPA + Honors</p>
-						<p class="details">3.61 (Magna Cum Laude)</p>
+					<div class="edu-text main">        
+						<p class="edu-lead">Cumulative GPA + Honors</p>
+						<p class="edu-details">3.61 (Magna Cum Laude)</p>
 					</div>
 				</div>
 			</div>
@@ -130,20 +130,20 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-1">
 					<div class="edu-text minor">        
-						<p class="lead">Minor in</p>
-						<p class="details">Psychology</p>
+						<p class="edu-lead">Minor in</p>
+						<p class="edu-details">Psychology</p>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-1">
 					<div class="edu-text minor">        
-						<p class="lead">Minor in</p>
-						<p class="details">Game Design & Development</p>
+						<p class="edu-lead">Minor in</p>
+						<p class="edu-details">Game Design & Development</p>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-3 col-md-offset-1">
 					<div class="edu-text minor">        
-						<p class="lead">Application Domain in</p>
-						<p class="details">Usability</p>
+						<p class="edu-lead">Application Domain in</p>
+						<p class="edu-details">Usability</p>
 					</div>
 				</div>
 			</div>
@@ -165,20 +165,39 @@
 					<h1>Experience</h1>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xs-11 col-xs-offset-1">
-					<p>Software Engineer</p>
-					<p>Epic</p>
-					<p>June 2014-Present</p>
+			
+			<div>
+				<div class="row">
+					<div class="col-xs-11 col-xs-offset-1">
+						<p>Software Engineer</p>
+						<p>Epic</p>
+						<p>June 2014-Present</p>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-11 col-xs-offset-1">
-					<p>I work as a full-stack software engineer, and have responsibilities that cover the full lifetime of the software that I write; investigation, design, development, testing, and maintenance are all expected to be done for all of my code. I develop in an equal split between the front end, the back end, and the build. I'm very involved with my team's process and project management, and have come up with a development process that my team continues to use efficiently. 
+				<div class="row">
+					<div class="col-xs-11 col-xs-offset-1">
+						<p>I work as a full-stack software engineer, and have responsibilities that cover the full lifetime of the software that I write; investigation, design, development, testing, and maintenance are all expected to be done for all of my code. I develop in an equal split between the front end, the back end, and the build. I'm very involved with my team's process and project management, and have come up with a development process that my team continues to use efficiently. 
 
-					My front end work has allowed me to work in ASP / .NET / C#, JavaScript, VB, HTML / CSS, and several related tools like Visual Studio, Balsamiq (for wireframes), SVN, Git, and more.</p>
+						My front end work has allowed me to work in ASP / .NET / C#, JavaScript, VB, HTML / CSS, and several related tools like Visual Studio, Balsamiq (for wireframes), SVN, Git, and more.</p>
+					</div>
 				</div>
 			</div>
+			
+			<div>
+				<div class="row">
+					<div class="col-xs-11 col-xs-offset-1">
+						<p>Assistant Director</p>
+						<p>RIT Insight Lab</p>
+						<p>February 2013 - August 2013 (7 months)</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-11 col-xs-offset-1">
+						<p>I am responsible for managing all employees of the lab using process and project management techniques, with a special focus on our Science Education Technology division. I have a management role in every area of the lab, including Public Relations, Research and Development, Projects and Programs, Science Education Technology, Family Science, and more. I am also responsible for leading a software engineering team dedicated to building software to make the lab run more efficiently, including a web-based employee management tool using Ruby on Rails, and a productivity tracking system using Google Scripts.</p>
+					</div>
+				</div>
+			</div>
+			
 			<div class="row"></div>
 		</div>
 		
@@ -214,6 +233,23 @@
 				</div>
 				<div class="section-title col-xs-11">
 					<h1>Some Projects I'm Proud Of</h1>
+				</div>			
+			</div>
+			<div class="project">
+				<div class="row">
+					<div class="col-xs-12">
+						<img class="project-image" src="resources/projects/committees/committee.png"/>
+					</div>
+				</div>
+				<div class="row project-row">
+					<div class="col-sm-3">
+						<h2>Committee Tracking</h2>
+						<span>Project Management</span></br>
+						<span>2013</span>
+					</div>
+					<div class="col-sm-9 col-md-8 col-lg-7">
+						<p class="project-text">One of my job responsibilities as Vice President of my Fraternity chapter was to "oversee the committees." Previously there was no formalized way to analyze the performance of the 17 committees, so I created and implemented a new process using Google Forms and some Google Code scripts. Using a scoring system based on the completion of weekly goals set by the committee heads, I was able to tactfully intervene on committees that showed a pattern of poor performance without bothering committees that were doing well.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -235,8 +271,135 @@
 				</div>
 			</div>
 			<div class="container-fluid">
-				<div id="Epic-Certs" class="row well well-sm">
+				<div class="row well well-sm">
 					<!-- Populated by Javascript -->
+					<!-- ADVANCED -->
+					
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo" src="resources/codeschool/bootstrap.png" />
+							<span class="text title">Bootstrap</span>
+							<span class="text source">Codeschool</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">Grid Design, Typography, Bootstrap CSS, Bootstrap JavaScript</span>
+						</div>
+					</div>
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo round" src="resources/epic180x180.png" />
+							<span class="text title">Web Tech Camp</span>
+							<span class="text source">Epic</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">Safely designing enterprise-level software using the MVVM Pattern, C#, CSS, HTML, JavaScript, Visual Studio 2013, and Fiddler</span>
+						</div>
+					</div>
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo round" src="resources/epic180x180.png" />
+							<span class="text title">.NET / C#</span>
+							<span class="text source">Epic</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">Advanced C#, Database communication, Designing for MVVM, Event handling, Error handling</span>
+						</div>
+					</div>
+					<!-- INTERMEDIATE -->
+					
+					
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo" src="resources/codeschool/front-end-formations.png" />
+							<span class="text title">Front-End 2</span>
+							<span class="text source">Codeschool</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">HTML5, CSS3, Fonts & Interactions</span>
+						</div>
+					</div>
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo" src="resources/codeschool/javascript-3.png" />
+							<span class="text title">Javascript pt. 3</span>
+							<span class="text source">Codeschool</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">Function Expressions, Closures, Hoisting, Objects, Prototypes</span>
+						</div>
+					</div>
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo round" src="resources/epic180x180.png" />
+							<span class="text title">Chronicles Server</span>
+							<span class="text source">Epic</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">Chronicles node-based DBMS, Mumps</span>
+						</div>
+					</div>
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo" src="resources/codeschool/javascript-1.png" />
+							<span class="text title">CSS</span>
+							<span class="text source">Codeschool</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">Clearing, Box bindings, Best Practices, Layout and Specificity Safety, Images, Sprites, Pseudo Classes</span>
+						</div>
+					</div>
+					<!-- BASIC -->
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo" src="resources/codeschool/javascript-2.png" />
+							<span class="text title">Javascript pt. 2</span>
+							<span class="text source">Codeschool</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">Loops, Conditionals, Built-Ins, Declarations, Arrays</span>
+						</div>
+					</div>
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo" src="resources/codeschool/javascript-1.png" />
+							<span class="text title">Javascript pt. 1</span>
+							<span class="text source">Codeschool</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">JS Console, Values, Variables, Files</span>
+						</div>
+					</div>
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo" src="resources/codeschool/front-end-foundations.png" />
+							<span class="text title">Front-End 1</span>
+							<span class="text source">Codeschool</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">HTML, CSS, Classes and Layout, Images, Fonts and Forms</span>
+						</div>
+					</div>
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo" src="resources/codeschool/sass.png" />
+							<span class="text title">Sass 1</span>
+							<span class="text source">Codeschool</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">Variables, Mixins, Extending, Directives, Math + Color, Responsiveness</span>
+						</div>
+					</div>
+					<div class="xcert-container">
+						<div class="xdetails">
+							<img class="xlogo" src="resources/codeschool/sass2.png" />
+							<span class="text title">Sass 2</span>
+							<span class="text source">Codeschool</span>
+						</div>
+						<div class="xextra-details">
+							<span class="text skills">Compass, Utilities, Rhythm, Sprites</span>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div> <!-- End Container -->

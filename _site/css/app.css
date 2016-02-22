@@ -1,202 +1,180 @@
+/*
+	PARENT CONTAINERS
+*/
+body {
+  background-image: url("../resources/background/ignasi_pattern_s.png");
+  font-size: 20px;
+  font-family: "europa","Helvetica Neue",sans-serif;
+  color: #444; }
 
-body{
-	background-image: url("../resources/ignasi_pattern_s.png");
-	font-size: 20px;
-	font-family: "europa","Helvetica Neue",sans-serif;
-}
+.container.section {
+  padding-top: 2.5em;
+  background-color: #EBEBEB;
+  padding-bottom: 2.5em; }
+.container.first {
+  margin-top: 4.5em; }
 
-.container.section{
-	padding-top: 2.5em;
-	background-color: #EBEBEB;
-	padding-bottom: 2.5em;
-}
+.debug {
+  position: fixed; }
 
-.first.container{
-	margin-top: 4.5em;
-}
+/* 
+	NAVIGATION 
+*/
+a.external {
+  text-decoration: underline;
+  color: #333;
+  font-weight: bold;
+  opacity: 0.7; }
+  a.external:hover {
+    opacity: 1; }
 
-.debug{
-	position: fixed;
-}
+/* 
+	GLYPHICON
+*/
+i.section.glyphicon {
+  font-size: 28px;
+  top: 1em;
+  float: right;
+  line-height: 1.1; }
 
-a.external{
-	text-decoration: underline;
-	color: #333;
-	font-weight: bold;
-	opacity: 0.7;
-}
-a.external:hover{
-	opacity: 1;
-}
+/* 
+	BIOGRAPHY 
+*/
+#bio-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; }
 
+.bio-content {
+  background-color: #EBEBEB;
+  color: #444;
+  padding-bottom: 2.5em; }
+
+#bio-name {
+  padding-right: .25em; }
+
+#bio-icons {
+  display: inline-block; }
+
+.icon {
+  height: 35px;
+  width: 35px; }
+  .icon.round {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%; }
+
+#bio-intro {
+  font-size: 1.15em; }
+
+/* 
+	EDUCATION
+*/
+.row.education {
+  margin-bottom: 1.5em;
+  margin-top: 3em; }
+
+.edu-text {
+  margin-right: 3em;
+  float: left; }
+  .edu-text.minor {
+    margin-bottom: 1.5em; }
+
+.edu-lead {
+  margin-bottom: 0px; }
+
+.edu-title {
+  font-size: 2em;
+  margin-bottom: 0px; }
+
+.edu-details {
+  font-size: 1.25em;
+  font-weight: bold; }
+
+/* 
+	Projects 
+*/
+.project {
+  padding-top: 1.5em; }
+
+.project-image {
+  width: 100%; }
+
+.project-text {
+  margin-top: 20px; }
+
+/* 
+	Footer 
+*/
+.main-foot {
+  border-top: 1px solid #444;
+  padding: 2.25em;
+  color: #444; }
+
+/* OTHER */
+/* Special thanks to Josh Messer for this CSS snippet inspiration: http://jsfiddle.net/JoshMesser/55ZfK/*/
+.section-border {
+  display: block;
+  border: none;
+  color: white;
+  height: 1px;
+  background: black;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#000), to(#fff)); }
+
+.section-border.small {
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 75, from(#000), to(#fff));
+  margin-bottom: 1em;
+  margin-top: 1.25em; }
+
+.xcert-container {
+  /*border: 1px solid lightgray;*/
+  width: 160px;
+  height: 280px;
+  margin: 1em 10px 1em 10px;
+  float: left; }
+
+.xlogo {
+  height: 120px;
+  width: 120px;
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.xlogo.round {
+  border-radius: 50%; }
+
+.xdetails {
+  padding-bottom: 5px; }
+
+.xextra-details {
+  border-top: 1px solid lightgray; }
+
+.text {
+  width: 100%;
+  display: block;
+  font-size: .6em;
+  padding-left: 5px;
+  text-align: center; }
+  .text.title {
+    font-weight: bold;
+    font-size: .85em; }
+  .text.skills {
+    font-style: italic;
+    text-align: left; }
+
+/*
 .navbar-right .navbar-nav > li > a:hover, .navbar-right .navbar-nav > li > a:focus{
     background-color: #000;
     color: #FAFAFA;
 }
 
-.navbar-collapse > li{
+.navbar-collapse li{
 	text-align: right;
 }
 
-i.section.glyphicon{
-	font-size: 1.25em;
-	top: 1em;
-	float: right;
-}
 
-/* Biography Section */
-.bio-image{
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-}
+	/*white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+*/
 
-.bio-icons{
-	display: inline-block;
-}
-.icon{
-	height: 35px;
-	width: 35px;
-}
-.icon.round{
-	height: 30px;
-	width: 30px;
-	border-radius: 50%;
-}
-
-.bio-name{
-	padding-right: .25em; 
-}
-
-.intro-content{
-	background-color: #EBEBEB;
-	padding-bottom: 2.5em;
-
-}
-
-.into-text{
-	font-size: 1.15em;
-}
-
-/* education */
-
-.education.row{
-	margin-bottom: 1.5em;
-	margin-top: 3em;
-}
-
-.education > div.main{
-	margin-bottom: 0em;
-}
-
-.edu-text{
-	margin-right: 3em;
-	float: left;
-}
-.edu-text > p.lead{
-	margin-bottom: 0px !important;
-}
-
-.edu-text > p.title{
-	font-size: 2em;
-	margin-bottom: 0px;
-}
-
-.edu-text > p.details{
-	font-size: 1.25em;
-	font-weight: bold;
-}
-
-.edu-text.minor{
-	margin-bottom: 1.5em;
-}
-
-/* Certification Main Details */
-.cert-row{
-	width: 100%;
-}
-
-.degree-logo{
-	height: 100px;
-	width: 100px;
-	border-radius: 50%;
-}
-
-.cert-container{
-	width: auto;
-	height: auto;
-	margin: 1em;
-	margin-right: 2em;
-	float: left;
-}
-
-.cert-details{
-	width: 100px;
-	height: inherit;
-	float: left;
-}
-
-.cert-details > div{
-	padding: 5px 0px 2px 0px;
-}
-
-div.cert-source{
-	text-align: center;
-
-}
-div.cert-image{
-	text-align: center;	
-}
-
-div.cert-image > img{
-	height: 50px;
-	width: 50px;
-	border-radius: 50%;
-}
-
-div.cert-title{
-	font-weight: bold;
-	text-align: center;
-}
-
-/* Extra Details*/
-.cert-extra-details{
-	height: auto;
-	width: auto;
-	float: left;
-}
-
-.cert-extra-details {
-	padding-top: 2em;
-}
-
-.cert-extra-details > ul{
-	padding-left: 1em;
-}
-
-/* Footer */
-.main-foot{
-	border-top: 1px solid #444;
-	padding: 2.25em;
-	color: #444;
-}
-
-
-/* OTHER */
-
-/* Special thanks to Josh Messer for this CSS snippet inspiration: http://jsfiddle.net/JoshMesser/55ZfK/*/
-.section-border{ 
-    display:block;
-    border:none;
-    color:white;
-    height:1px;
-    background:black;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#000), to(#fff));
-}
-
-.section-border.small{
-	background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 75, from(#000), to(#fff));
-	margin-bottom: 1em;
-	margin-top: 1.25em;
-}
-
+/*# sourceMappingURL=app.css.map */
