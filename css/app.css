@@ -68,7 +68,9 @@ i.section.glyphicon {
 
 #bio-icons {
   display: inline-block;
-  height: inherit; }
+  position: relative;
+  height: inherit;
+  bottom: .45em; }
 
 .icon {
   height: 35px;
@@ -85,26 +87,30 @@ i.section.glyphicon {
 /* 
 	EDUCATION
 */
-.row.education {
-  margin-bottom: 1.5em;
-  margin-top: 3em; }
-
-.edu-text {
-  margin-right: 3em;
-  float: left; }
-  .edu-text.minor {
-    margin-bottom: 1.5em; }
-
-.edu-lead {
-  margin-bottom: 0px; }
-
-.edu-title {
-  font-size: 2em;
-  margin-bottom: 0px; }
-
 .edu-details {
-  font-size: 1.25em;
-  font-weight: bold; }
+  padding-right: 1em;
+  border-right: 1px solid #CBCBCB;
+  margin-left: 1em; }
+  .edu-details:first-of-type {
+    margin-left: 0px; }
+  .edu-details:last-of-type {
+    border: none; }
+
+.minor-box {
+  display: inline-block;
+  width: 14em;
+  height: 3em;
+  margin: 1em 1em 1em 0;
+  overflow: hidden; }
+  .minor-box > p {
+    margin: 0; }
+  .minor-box > h3 {
+    margin: 0;
+    font-size: 1.4em;
+    padding-bottom: 1em; }
+
+.row.education {
+  margin-bottom: 1.5em; }
 
 /* 
 	Projects 
@@ -113,7 +119,10 @@ i.section.glyphicon {
   padding-top: 1.5em; }
 
 .project-image {
-  width: 100%; }
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin: 0 auto 0 auto; }
 
 .project-text {
   margin-top: 20px; }
@@ -156,10 +165,6 @@ i.section.glyphicon {
   float: left;
   color: #CBCBCB; }
 
-.container-fluid > .well {
-  background-color: #141414;
-  border: none; }
-
 .xlogo {
   height: 120px;
   width: 120px;
@@ -187,21 +192,5 @@ i.section.glyphicon {
   .text.skills {
     font-style: italic;
     text-align: left; }
-
-/*
-.navbar-right .navbar-nav > li > a:hover, .navbar-right .navbar-nav > li > a:focus{
-    background-color: #000;
-    color: #FAFAFA;
-}
-
-.navbar-collapse li{
-	text-align: right;
-}
-
-
-	/*white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-*/
 
 /*# sourceMappingURL=app.css.map */
