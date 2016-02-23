@@ -67,7 +67,8 @@ i.section.glyphicon {
   padding-bottom: 2.5em; }
 
 #bio-icons {
-  display: inline-block; }
+  display: inline-block;
+  height: inherit; }
 
 .icon {
   height: 35px;
