@@ -1,5 +1,25 @@
 
 
+(function($) {
+    var $window = $(window),
+        $html = $('html');
+
+    function resize() {
+        if ($window.width() < 992) {	// Bootstrap widths
+
+            return $('.container.section').addClass('container-fluid').removeClass('container');
+        }
+
+        return $('.container-fluid.section').addClass('container').removeClass('container-fluid');
+    }
+
+    $window
+        .resize(resize)
+        .trigger('resize');
+})(jQuery);
+
+
+
 function parseBadges(html){
 	var badgeDom = $('<div></div>');	/* Create dummy DOM element to manipulate */
 	badgeDom.html(html);
