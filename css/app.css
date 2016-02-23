@@ -1,6 +1,9 @@
 /*
 	PARENT CONTAINERS
 */
+.debug {
+  display: none; }
+
 html {
   font-size: 10px; }
 
@@ -22,9 +25,6 @@ body {
 
 .container-fluid {
   max-width: 1170px; }
-
-.debug {
-  position: fixed; }
 
 h1 {
   font-size: 1.9em;

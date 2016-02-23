@@ -7,10 +7,20 @@ $section-color: #141414; //#EBEBEB for ghost, #333333 for black
 $link-color: #FFF; //#333;
 $header-color: #FFF;
 
+$debug: false;
 
 /*
 	PARENT CONTAINERS
 */
+
+.debug{
+	@if($debug){
+		position: fixed;
+	} @else{
+		display: none;
+	}
+}
+
 html{
 	font-size: 10px;
 }
@@ -39,10 +49,6 @@ body{
 }
 .container-fluid{
 	max-width: 1170px;
-}
-
-.debug{
-	position: fixed;
 }
 
 
