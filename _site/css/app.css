@@ -1,41 +1,57 @@
 /*
 	PARENT CONTAINERS
 */
-body {
-  background-image: url("../resources/background/ignasi_pattern_s.png");
-  font-size: 20px;
-  font-family: "europa","Helvetica Neue",sans-serif;
-  color: #444; }
+html {
+  font-size: 10px; }
 
-.container.section {
+body {
+  background-image: url("../resources/background/ignasi_dark.png");
+  font-size: 2em;
+  font-family: "europa","Helvetica Neue",sans-serif;
+  color: #CBCBCB; }
+
+.section {
   padding-top: 2.5em;
-  background-color: #EBEBEB;
+  background-color: #141414;
   padding-bottom: 2.5em; }
-.container.first {
-  margin-top: 4.5em; }
+  .section.first {
+    margin-top: 4.5em; }
+  .section.no-background {
+    background: inherit;
+    padding-bottom: 0px; }
+
+.container-fluid {
+  max-width: 1170px; }
 
 .debug {
   position: fixed; }
+
+h1 {
+  font-size: 1.9em;
+  display: inline-block;
+  padding-right: .25em;
+  padding-top: .05em;
+  color: #FFF; }
 
 /* 
 	NAVIGATION 
 */
 a.external {
   text-decoration: underline;
-  color: #333;
-  font-weight: bold;
-  opacity: 0.7; }
+  color: #FFF;
+  font-weight: bold; }
   a.external:hover {
-    opacity: 1; }
+    opacity: .7; }
 
 /* 
 	GLYPHICON
 */
 i.section.glyphicon {
   font-size: 28px;
-  top: 1em;
+  padding-top: 1em;
   float: right;
-  line-height: 1.1; }
+  line-height: 1.1;
+  color: #FFF; }
 
 /* 
 	BIOGRAPHY 
@@ -46,12 +62,9 @@ i.section.glyphicon {
   border-radius: 50%; }
 
 .bio-content {
-  background-color: #EBEBEB;
-  color: #444;
+  background-color: #141414;
+  color: #CBCBCB;
   padding-bottom: 2.5em; }
-
-#bio-name {
-  padding-right: .25em; }
 
 #bio-icons {
   display: inline-block; }
@@ -65,7 +78,8 @@ i.section.glyphicon {
     border-radius: 50%; }
 
 #bio-intro {
-  font-size: 1.15em; }
+  font-size: 1.15em;
+  line-height: 1.4; }
 
 /* 
 	EDUCATION
@@ -109,29 +123,35 @@ i.section.glyphicon {
 .main-foot {
   border-top: 1px solid #444;
   padding: 2.25em;
-  color: #444; }
+  opacity: .7; }
 
 /* OTHER */
 /* Special thanks to Josh Messer for this CSS snippet inspiration: http://jsfiddle.net/JoshMesser/55ZfK/*/
 .section-border {
   display: block;
   border: none;
-  color: white;
+  color: black;
   height: 1px;
-  background: black;
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#000), to(#fff)); }
+  background: white;
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#000)); }
 
 .section-border.small {
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 75, from(#000), to(#fff));
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 75, from(#fff), to(#000));
   margin-bottom: 1em;
   margin-top: 1.25em; }
 
+/* CERTIFICATION TESTS */
 .xcert-container {
   /*border: 1px solid lightgray;*/
   width: 160px;
   height: 280px;
   margin: 1em 10px 1em 10px;
-  float: left; }
+  float: left;
+  color: #CBCBCB; }
+
+.container-fluid > .well {
+  background-color: #141414;
+  border: none; }
 
 .xlogo {
   height: 120px;
