@@ -123,7 +123,13 @@ i.section.glyphicon {
 .main-foot {
   border-top: 1px solid #444;
   padding: 2.25em;
-  opacity: .7; }
+  opacity: .7;
+  background-color: #141414; }
+  .main-foot div {
+    width: 60%;
+    margin: auto; }
+  .main-foot p {
+    max-width: 640px; }
 
 /* OTHER */
 /* Special thanks to Josh Messer for this CSS snippet inspiration: http://jsfiddle.net/JoshMesser/55ZfK/*/

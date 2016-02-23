@@ -175,6 +175,14 @@ i.section.glyphicon{
 	border-top: 1px solid #444;
 	padding: 2.25em;
 	opacity: .7;
+	background-color: $section-color;
+	& div{
+		width: 60%;
+		margin: auto;
+	}
+	& p{
+		max-width: 640px;
+	}
 }
 
 
