@@ -9,6 +9,12 @@ $header-color: #FFF;
 
 $debug: false;
 
+@mixin respond-to($val, $query){
+	@media ($val: $query){
+		@content;
+	}
+}
+
 /*
 	PARENT CONTAINERS
 */
@@ -237,6 +243,8 @@ i.glyphicon-new-window{
 }
 
 
+
+
 /* CERTIFICATION TESTS */
 .xcert-container{
 	/*border: 1px solid lightgray;*/
@@ -245,6 +253,11 @@ i.glyphicon-new-window{
 	margin: 1em 10px 1em 10px;
 	float: left;
 	color: $text-color;
+	@include respond-to(max-width, 600px){
+		font-size: .8em;
+		width: 120px;
+		height: 200px;
+	}
 }
 
 .xlogo{
@@ -252,6 +265,10 @@ i.glyphicon-new-window{
 	width: 120px;
 	display: block;
 	margin: 5px auto 5px auto;
+	@include respond-to(max-width, 600px){
+		height: 80px;
+		width: 80px;
+	}
 }
 .xlogo.round{
 	border-radius: 50%;
