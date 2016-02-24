@@ -33,12 +33,15 @@ h1 {
   padding-top: .05em;
   color: #FFF; }
 
+h3 {
+  color: #e5e5e5; }
+
 /* 
 	NAVIGATION 
 */
 a.external {
   text-decoration: underline;
-  color: #FFF;
+  color: #337ab7;
   font-weight: bold; }
   a.external:hover {
     opacity: .7; }
@@ -52,6 +55,11 @@ i.section.glyphicon {
   float: right;
   line-height: 1.1;
   color: #FFF; }
+
+i.glyphicon-new-window {
+  font-size: .5em;
+  color: #337ab7;
+  padding-left: 2px; }
 
 /* 
 	BIOGRAPHY 
@@ -134,12 +142,14 @@ i.section.glyphicon {
   border-top: 1px solid #444;
   padding: 2.25em;
   opacity: .7;
-  background-color: #141414; }
+  background-color: #141414;
+  font-size: .8em; }
   .main-foot div {
-    width: 60%;
     margin: auto; }
-  .main-foot p {
-    max-width: 640px; }
+  .main-foot p:first-of-type {
+    color: #FFF; }
+  .main-foot p:last-of-type {
+    padding-bottom: 2em; }
 
 /* OTHER */
 /* Special thanks to Josh Messer for this CSS snippet inspiration: http://jsfiddle.net/JoshMesser/55ZfK/*/

@@ -4,7 +4,7 @@ $black-bg: "../resources/background/congruent_outline.png";
 
 $text-color: #CBCBCB; //#444;
 $section-color: #141414; //#EBEBEB for ghost, #333333 for black
-$link-color: #FFF; //#333;
+$link-color: #337ab7; //#FFF; //#333;
 $header-color: #FFF;
 
 $debug: false;
@@ -64,6 +64,10 @@ h2{
 	
 }
 
+h3{
+	color: lighten($text-color, 10%);
+}
+
 
 /* 
 	NAVIGATION 
@@ -90,6 +94,12 @@ i.section.glyphicon{
 	float: right;
 	line-height: 1.1;
 	color: $header-color;
+}
+// External link icon
+i.glyphicon-new-window{
+	font-size: .5em;
+	color: $link-color;
+	padding-left: 2px;
 }
 
 
@@ -194,12 +204,16 @@ i.section.glyphicon{
 	padding: 2.25em;
 	opacity: .7;
 	background-color: $section-color;
+	font-size: .8em;
 	& div{
-		width: 60%;
+		//width: 60%;
 		margin: auto;
 	}
-	& p{
-		max-width: 640px;
+	& p:first-of-type{
+		color: $header-color;
+	}
+	& p:last-of-type{
+		padding-bottom: 2em;
 	}
 }
 
