@@ -46,6 +46,9 @@ a.external {
   a.external:hover {
     opacity: .7; }
 
+.social-link:hover, .social-link:focus, .social-link:active {
+  text-decoration: none; }
+
 /* 
 	GLYPHICON
 */
@@ -64,10 +67,16 @@ i.glyphicon-new-window {
 /* 
 	BIOGRAPHY 
 */
-#bio-image {
+.bio-image-container {
   width: 200px;
-  height: 200px;
-  border-radius: 50%; }
+  height: 200px; }
+  .bio-image-container > img {
+    border-radius: 50%;
+    max-width: 100%; }
+  @media screen and (max-width: 600px) {
+    .bio-image-container {
+      width: 150px;
+      height: 150px; } }
 
 .bio-content {
   background-color: #141414;
@@ -79,6 +88,10 @@ i.glyphicon-new-window {
   position: relative;
   height: inherit;
   bottom: .45em; }
+  @media screen and (max-width: 435px) {
+    #bio-icons {
+      display: block;
+      margin-left: 10px; } }
 
 .icon {
   height: 35px;
@@ -95,10 +108,14 @@ i.glyphicon-new-window {
 /* 
 	EDUCATION
 */
+.edu-container {
+  margin-bottom: 1em; }
+
 .edu-details {
   padding-right: 1em;
   border-right: 1px solid #CBCBCB;
-  margin-left: 1em; }
+  margin-left: 1em;
+  font-style: italic; }
   .edu-details:first-of-type {
     margin-left: 0px; }
   .edu-details:last-of-type {
@@ -106,16 +123,18 @@ i.glyphicon-new-window {
 
 .minor-box {
   display: inline-block;
-  width: 14em;
-  height: 3em;
-  margin: 1em 1em 1em 0;
+  width: 10em;
+  height: auto;
+  margin-right: 1em;
   overflow: hidden; }
   .minor-box > p {
     margin: 0; }
   .minor-box > h3 {
     margin: 0;
     font-size: 1.4em;
-    padding-bottom: 1em; }
+    padding-bottom: 10px; }
+  .minor-box:nth-of-type(2) {
+    font-size: 0.8em; }
 
 .row.education {
   margin-bottom: 1.5em; }
@@ -174,18 +193,22 @@ i.glyphicon-new-window {
   margin: 1em 10px 1em 10px;
   float: left;
   color: #CBCBCB; }
-  @media (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     .xcert-container {
       font-size: .8em;
       width: 120px;
       height: 200px; } }
+  @media screen and (max-width: 600px) {
+    .xcert-container {
+      margin-left: 5px;
+      margin-right: 5px; } }
 
 .xlogo {
   height: 120px;
   width: 120px;
   display: block;
   margin: 5px auto 5px auto; }
-  @media (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     .xlogo {
       height: 80px;
       width: 80px; } }

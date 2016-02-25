@@ -10,7 +10,7 @@ $header-color: #FFF;
 $debug: false;
 
 @mixin respond-to($val, $query){
-	@media ($val: $query){
+	@media screen and ($val: $query){
 		@content;
 	}
 }
@@ -66,10 +66,6 @@ h1 {
 	color: $header-color;
 }
 
-h2{
-	
-}
-
 h3{
 	color: lighten($text-color, 10%);
 }
@@ -86,7 +82,11 @@ a.external{
 		opacity: .7;
 	}
 }
-
+.social-link{
+	&:hover, &:focus, &:active{
+		text-decoration: none;
+	}
+}
 
 
 
@@ -113,10 +113,17 @@ i.glyphicon-new-window{
 /* 
 	BIOGRAPHY 
 */
-#bio-image{
+.bio-image-container{
 	width: 200px;
 	height: 200px;
-	border-radius: 50%;
+	&> img{
+		border-radius: 50%;
+		max-width: 100%;
+	}
+	@include respond-to(max-width, 600px){
+		width: 150px;
+		height: 150px;
+	}
 }
 
 .bio-content{
@@ -131,6 +138,10 @@ i.glyphicon-new-window{
 	position: relative;
 	height: inherit;
 	bottom: .45em;
+	@include respond-to(max-width, 435px){
+		display: block;
+		margin-left: 10px;
+	}	
 }
 .icon{
 	height: 35px;
@@ -152,10 +163,14 @@ i.glyphicon-new-window{
 /* 
 	EDUCATION
 */
+.edu-container{
+	margin-bottom: 1em;
+}
 .edu-details{
 	padding-right: 1em;
 	border-right: 1px solid #CBCBCB;
 	margin-left: 1em;
+	font-style: italic;
 	&:first-of-type{
 		margin-left: 0px;
 	}
@@ -165,9 +180,9 @@ i.glyphicon-new-window{
 }
 .minor-box{
 	display: inline-block;
-	width: 14em;
-	height: 3em;
-	margin: 1em 1em 1em 0;
+	width: 10em;
+	height: auto;
+	margin-right: 1em;
 	overflow: hidden;
 	
 	&> p{
@@ -176,7 +191,10 @@ i.glyphicon-new-window{
 	&> h3{
 		margin: 0;
 		font-size: 1.4em;
-		padding-bottom: 1em;
+		padding-bottom: 10px;
+	}
+	&:nth-of-type(2){
+		font-size: .8em
 	}
 }
 .row.education{
@@ -257,6 +275,10 @@ i.glyphicon-new-window{
 		font-size: .8em;
 		width: 120px;
 		height: 200px;
+	}
+	@include respond-to(max-width, 600px){
+		margin-left: 5px;
+		margin-right: 5px;
 	}
 }
 
