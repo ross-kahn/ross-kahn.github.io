@@ -94,7 +94,7 @@ a.external{
 /* 
 	GLYPHICON
 */
-i.section.glyphicon{
+.section-glyphicon{
 	font-size: 28px;
 	padding-top: 1em;
 	float: right;
@@ -152,6 +152,13 @@ i.glyphicon-new-window{
 		border-radius: 50%;
 	}
 }
+.icon-big{
+	height: 30px;
+	width: 25px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
 #bio-intro{
 	font-size: 1.15em;
 	line-height: 1.4;
@@ -167,6 +174,7 @@ i.glyphicon-new-window{
 	margin-bottom: 1em;
 }
 .edu-details{
+	display: inline-block;
 	padding-right: 1em;
 	border-right: 1px solid #CBCBCB;
 	margin-left: 1em;
@@ -180,11 +188,7 @@ i.glyphicon-new-window{
 }
 .minor-box{
 	display: inline-block;
-	width: 10em;
-	height: auto;
-	margin-right: 1em;
-	overflow: hidden;
-	
+	margin-right: 2em;	
 	&> p{
 		margin: 0;
 	}
@@ -192,9 +196,6 @@ i.glyphicon-new-window{
 		margin: 0;
 		font-size: 1.4em;
 		padding-bottom: 10px;
-	}
-	&:nth-of-type(2){
-		font-size: .8em
 	}
 }
 .row.education{
@@ -206,12 +207,15 @@ i.glyphicon-new-window{
 	Projects 
 */
 .project{
-	padding-top: 1.5em;
+	padding: 2.5em 0px 2.5em 0px;
+}
+
+.responsive-img{
+	width: 100%;
 }
 
 .project-image{
-	width: 50%;
-	height: 50%;
+	max-width: 80%;
 	display: block;
 	margin: 0 auto 0 auto;
 }
@@ -260,25 +264,24 @@ i.glyphicon-new-window{
 	margin-top: 1.25em;
 }
 
-
-
-
 /* CERTIFICATION TESTS */
+.certs-parent{
+	width: 100%;
+}
 .xcert-container{
-	/*border: 1px solid lightgray;*/
 	width: 160px;
 	height: 280px;
+	color: $text-color;
 	margin: 1em 10px 1em 10px;
 	float: left;
-	color: $text-color;
-	@include respond-to(max-width, 600px){
+	@include respond-to(max-width, 385px){
 		font-size: .8em;
 		width: 120px;
-		height: 200px;
+		height: 280px;
 	}
-	@include respond-to(max-width, 600px){
-		margin-left: 5px;
-		margin-right: 5px;
+	@include respond-to(max-width, 329px){
+		
+		margin: 1em 5px 1em 5px;
 	}
 }
 
@@ -312,6 +315,7 @@ i.glyphicon-new-window{
 	&.title{	
 		font-weight: bold;
 		font-size: .85em;
+		color: $header-color;
 	}
 	&.skills{
 		font-style: italic;
