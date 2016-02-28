@@ -147,12 +147,8 @@ i.glyphicon-new-window {
 .project {
   padding: 2.5em 0px 2.5em 0px; }
 
-.responsive-img {
-  width: 100%; }
-
 .project-image {
   max-width: 80%;
-  display: block;
   margin: 0 auto 0 auto; }
 
 .project-text {
