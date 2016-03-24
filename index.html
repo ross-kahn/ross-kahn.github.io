@@ -82,26 +82,61 @@
 				<!--<div class="col-xs-12 col-sm-10 col-md-8">
 					<p id="bio-intro">I'm a software engineer and usability designer interested in process & project management, and practical, purpose-driven products built around the user. Currently a developer at <a class="external" href="http://www.epic.com/about-index.php">Epic</a>.</p>
 				</div>-->
-				<div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1">
+				<div class="panel-group col-xs-12 col-sm-10 col-md-8 col-sm-offset-1">
 					<p id="bio-intro">
 					
-					<a href="#">Usability</a> pro. <a href="#">Metrics</a> geek. 
+					<a href="#usability-skill-description" data-parent="#accordion" data-toggle="collapse">Usability</a> pro. 
 					
-					Passionate <a href="#">project manager</a>. 
+					Passionate <a href="#pm-skill-description" data-parent="#accordion" data-toggle="collapse">project manager</a>. 
 					
-					Experienced <a href="#">leader</a>. 
+					Experienced <a href="#leader-skill-description" data-parent="#accordion" data-toggle="collapse">leader</a>. 
 					
-					Quick <a href="#">learner</a>. 
+					Quick <a href="#learner-skill-description" data-parent="#accordion" data-toggle="collapse">learner</a>. 
 					
-					<a href="#">Achievement</a> junkie. 
+					<a href="#achievement-skill-description" data-parent="#accordion" data-toggle="collapse">Achievement</a> junkie. 
 					
 					I like to <a href="#">tinker</a> and make products that people enjoy using. 
 					
 					Currently a developer at <a class="external" href="http://www.epic.com" target="_blank">Epic<i class='glyphicon glyphicon-new-window'></i></a>.
 					
 					</p>
+					
+					</div>
 				</div>
-			</div>
+				<div id="accordion" class="row">
+					<div class="panel panel-default col-xs-12 col-sm-10 col-sm-offset-1">
+						<div id="usability-skill-description" class="panel-collapse collapse">
+							<div class="panel-body">
+								<h4>Usability</h4>
+								Gestaltism, Fitts' law, human factors, usability testing (including hallway testing, moderated testing, and summative testing), heuristic evaluations, and common practices are all like a primary language to me. My education, professional experience, and dedicated reading on the subject have allowed me to practice and expand on these skills often. Currently I hold the title of Usability Coordinator for my section at Epic, which contains about 50-75 developers. 
+							</div>
+						</div>
+						<div id="pm-skill-description" class="panel-collapse collapse">
+							<div class="panel-body">
+								<h4>Project Management</h4>
+								I have over 4500 hours of project management experience in a wide variety of projects. These projects include the creation of multiple enterprise-level software systems, implementing processes to monitor and control over a dozen volunteer committees, and even organizing a Guinness World Record breaking event. In March 2016 I earned my Certified Associate in Project Management certification from PMI, with the intention of also earning my Project Management Professional and PMI Agile Certified Practitioner certifications in the near future.
+							</div>
+						</div>
+						<div id="leader-skill-description" class="panel-collapse collapse">
+							<div class="panel-body">
+								<h4>Leadership</h4>
+								My motivation comes from people: both the people I'm creating software for, and the people I work with. I pride myself on working very well with others, being able to motivate the other people on my team, and providing guidance based on my project management experience. I really believe that a high-functioning software team is an unstoppable problem-solving force.
+							</div>
+						</div>
+						<div id="learner-skill-description" class="panel-collapse collapse">
+							<div class="panel-body">
+								<h4>Learning</h4>
+								I have a near-insatiable appetite for learning. I devoured my classes in college, allowing me to graduate with honors with an engineering major and two minors. All of my work experience, and especially my work at Epic, forces me to become an expert very quickly in both technical and non-technical areas that I've never had experience with. I'm constantly learning new technologies to keep my skills razor-sharp and up to date (as evidenced by my Codeschool certifications).
+							</div>
+						</div>
+						<div id="achievement-skill-description" class="panel-collapse collapse">
+							<div class="panel-body">
+								<h4>Achievement</h4>
+								I'm constantly working to be the best at what I do. I take pride and ownership in the project I'm a part of, and during work hours I'm using my entire arsenal of knowledge and experience to make my projects the best they can be. After hours I'm determinedly working to expand and reinforce that arsenal of knowledge by doing side projects, completing Codeschool courses, and earning professional certifications like the CAPM.
+							</div>
+						</div>
+					</div>
+				</div>
 			<div>
 				<span class="section-border"></span>
 			</div>
@@ -336,13 +371,10 @@
 					<i class="section-glyphicon glyphicon glyphicon-bullhorn"></i>
 				</div>
 				<div class="section-title col-xs-11">
-					<h1>Some Projects I'm Proud Of</h1>
+					<h1>Projects and Experience</h1>
 				</div>			
 			</div>
 			<div class="project">
-				<div class="row">
-					<img class="img-responsive project-image" src="resources/projects/site.png"/>
-				</div>
 				<div class="row project-row">
 					<div class="col-sm-3">
 						<h2>Portfolio Website</h2>
@@ -400,7 +432,7 @@
 							<a href="http://www.se.rit.edu/~oce-connect/index.php" target="_blank" class="social-link">
 								<img class="icon-big" src="resources\projects\jobSalt-logo.png"/>
 								
-								jobSalt Project Page
+								Project Page
 								
 								<i class='glyphicon glyphicon-new-window'></i>
 							</a>
@@ -461,6 +493,25 @@
 					</div>
 				</div>
 			</div>
+			
+			<div class="container">
+				<div class="row">
+					<span class="section-border"></span>
+				</div>
+			</div>
+			
+			<div class="project">
+				<div class="row project-row">
+					<div class="col-sm-3">
+						<h2>Guinness World Record</h2>
+						<span>Project Management</span></br>
+						<span>2011</span>
+					</div>
+					<div class="col-sm-9 col-md-8 col-lg-7">
+						<p class="project-text">I did a fun thing</p>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		
@@ -509,25 +560,25 @@
 					<div class="col-md-6">
 						<p>Technology</p>
 						<p>
-							Site built using <a class="external" href="https://jekyllrb.com/" target="_blank">Jekyll<i class='glyphicon glyphicon-new-window'></i></a>. 
+							Site built using <a class="external" href="https://jekyllrb.com/" target="_blank">Jekyll</a>. 
 							
-							Hosted on <a class="external" href="https://pages.github.com/" target="_blank">Github Pages<i class='glyphicon glyphicon-new-window'></i></a> 
+							Hosted on <a class="external" href="https://pages.github.com/" target="_blank">Github Pages</a> 
 							
-							(see the source on my <a class="external" href="https://github.com/ross-kahn/ross-kahn.github.io" target="_blank">project page<i class='glyphicon glyphicon-new-window'></i></a>). 
+							(see the source on my <a class="external" href="https://github.com/ross-kahn/ross-kahn.github.io" target="_blank">project page</a>). 
 							
-							Written in <a class="external" href="https://notepad-plus-plus.org/" target="_blank">Notepad++<i class='glyphicon glyphicon-new-window'></i></a>. 
+							Written in <a class="external" href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a>. 
 							
-							CSS written in <a class="external" href="http://sass-lang.com/" target="_blank">Sass<i class='glyphicon glyphicon-new-window'></i></a>.
+							CSS written in <a class="external" href="http://sass-lang.com/" target="_blank">Sass</a>.
 							
-							Layout designed using <a class="external" href="http://getbootstrap.com/" target="_blank">Bootstrap<i class='glyphicon glyphicon-new-window'></i></a>.
+							Layout designed using <a class="external" href="http://getbootstrap.com/" target="_blank">Bootstrap</a>.
 							
-							Favicon created in <a class="external" href="http://i.imgur.com/ogrxhQW.gif" target="_blank">Microsoft Paint<i class='glyphicon glyphicon-new-window'></i></a> (I know, right?).
+							Favicon created in <a class="external" href="http://i.imgur.com/ogrxhQW.gif" target="_blank">Microsoft Paint</a> (I know, right?).
 						</p>
 					</div>
 					<div class="col-md-5 col-md-offset-1">
 						<p>Design</p>
 						<p>
-							Special thanks to <a class="external" href="http://www.sawyerh.com/" target="_blank">Sawyer Hollenshead<i class='glyphicon glyphicon-new-window'></i></a> for the design inspiration. Background by Mustafa BAL from <a class="external" href="http://subtlepatterns.com/" target="_blank">Subltepatterns.com<i class='glyphicon glyphicon-new-window'></i></a>.
+							Special thanks to <a class="external" href="http://www.sawyerh.com/" target="_blank">Sawyer Hollenshead</a> for the design inspiration. Background by Mustafa BAL from <a class="external" href="http://subtlepatterns.com/" target="_blank">Subltepatterns.com</a>.
 						</p>
 					</div>
 				</div>
