@@ -7,6 +7,13 @@ $section-color: #141414; //#EBEBEB for ghost, #333333 for black
 $link-color: #337ab7; //#FFF; //#333;
 $active-link: #94CDFF;
 $header-color: #FFF;
+$skill-toptop: #006CBF;
+$skill-topmid: #4C9CD8;
+$skill-topsm: #004172;
+$skill-midtop: #BA0038;
+$skill-midmid: #6D0400;
+$skill-midsm: #871410;
+$skill-sm: #006D0D;
 
 $debug: false;
 
@@ -95,7 +102,7 @@ a.external{
 	color: $link-color;
 	font-weight: bold;
 	&:hover{
-		opacity: .7;
+		color: $active-link;
 	}
 }
 .social-link{
@@ -115,26 +122,75 @@ i.glyphicon-new-window{
 	SKILLS
 */
 .skill{
-	&.experienced{
-		font-size: 1.10em;
-		font-weight: bold;
-	}
-	&.certified{
-		//text-decoration: underline;
-		border-bottom: 2px solid $text-color;
-	}
-	&.familiar{
-		font-size: .85em;
-		font-style: italic;
-	}
+	padding-left: 10px;
+	color: $text-color;
 }
 .key{
+	display: inline-block;
 	margin-right: 1.5em;
 	margin-bottom: 1em;
 	color: white;
 }
-
-
+.bargraph {
+    list-style: none;
+    padding-top: 20px;
+    max-width:800px;
+	padding-left: 0px;
+}
+ul.bargraph li {
+    height: 35px;
+    color: white;
+    text-align: left;
+    font-style: italic;
+    font-weight:bolder;
+    font-size: .85em;
+    line-height: 35px;
+    padding: 0px 20px;
+    margin-bottom: 5px;
+	
+	&.toptop{
+		width: 100%;
+		background: $skill-toptop;
+	}
+	&.topmid{
+		width: 90%;
+		background-color: $skill-topmid;
+	}
+	&.topsm{
+		width: 80%;
+		background-color: $skill-topsm;
+	}
+	&.midtop{
+		width: 70%;
+		background-color: $skill-midtop;
+	}
+	&.midmid{
+		width: 60%;
+		background-color: $skill-midmid;
+	}
+	&.midsm{
+		width: 50%;
+		background-color: $skill-midsm;
+	}
+	&.smtop{
+		width: 40%;
+		background-color: $skill-sm;
+	}
+	&.smmid{
+		width: 30%;
+		background-color: desaturate($skill-sm,60);
+	}
+	&.axis{
+		width: 100%;
+		font-style: none;
+		padding-left: 0px;
+		border-bottom: 1px solid $text-color;
+		color: $text-color;
+		.highend{
+			float: right;
+		}
+	}
+}
 
 
 /* 
@@ -288,7 +344,13 @@ i.glyphicon-new-window{
 .project-text{
 	margin-top: 20px;
 }
-
+.project-links{
+	list-style: none;
+	//padding-left: 5px;
+}
+.project-links li{
+	padding-bottom: 10px;
+}
 
 
 /* 

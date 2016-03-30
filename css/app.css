@@ -56,7 +56,7 @@ a.external {
   color: #337ab7;
   font-weight: bold; }
   a.external:hover {
-    opacity: .7; }
+    color: #94CDFF; }
 
 .social-link:hover, .social-link:focus, .social-link:active {
   text-decoration: none; }
@@ -69,19 +69,64 @@ i.glyphicon-new-window {
 /*
 	SKILLS
 */
-.skill.experienced {
-  font-size: 1.10em;
-  font-weight: bold; }
-.skill.certified {
-  border-bottom: 2px solid #CBCBCB; }
-.skill.familiar {
-  font-size: .85em;
-  font-style: italic; }
+.skill {
+  padding-left: 10px;
+  color: #CBCBCB; }
 
 .key {
+  display: inline-block;
   margin-right: 1.5em;
   margin-bottom: 1em;
   color: white; }
+
+.bargraph {
+  list-style: none;
+  padding-top: 20px;
+  max-width: 800px;
+  padding-left: 0px; }
+
+ul.bargraph li {
+  height: 35px;
+  color: white;
+  text-align: left;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: .85em;
+  line-height: 35px;
+  padding: 0px 20px;
+  margin-bottom: 5px; }
+  ul.bargraph li.toptop {
+    width: 100%;
+    background: #006CBF; }
+  ul.bargraph li.topmid {
+    width: 90%;
+    background-color: #4C9CD8; }
+  ul.bargraph li.topsm {
+    width: 80%;
+    background-color: #004172; }
+  ul.bargraph li.midtop {
+    width: 70%;
+    background-color: #BA0038; }
+  ul.bargraph li.midmid {
+    width: 60%;
+    background-color: #6D0400; }
+  ul.bargraph li.midsm {
+    width: 50%;
+    background-color: #871410; }
+  ul.bargraph li.smtop {
+    width: 40%;
+    background-color: #006D0D; }
+  ul.bargraph li.smmid {
+    width: 30%;
+    background-color: #214c26; }
+  ul.bargraph li.axis {
+    width: 100%;
+    font-style: none;
+    padding-left: 0px;
+    border-bottom: 1px solid #CBCBCB;
+    color: #CBCBCB; }
+    ul.bargraph li.axis .highend {
+      float: right; }
 
 /* 
 	GLYPHICON
@@ -204,6 +249,12 @@ i.glyphicon-new-window {
 
 .project-text {
   margin-top: 20px; }
+
+.project-links {
+  list-style: none; }
+
+.project-links li {
+  padding-bottom: 10px; }
 
 /* 
 	Footer 
