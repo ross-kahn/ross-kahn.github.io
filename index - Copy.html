@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="portfolio" ng-strict-di>
 	<head>
 		<script src="js/vendor/jquery-1.12.2.min.js"></script>
 		<script src="js/vendor/bootstrap.min.js"></script>
@@ -31,6 +31,35 @@
 		</script>
 	</head>
 	<body>
+	
+	
+	
+		<!-- 
+		-----
+		-----
+		Debug Section
+		-----
+		-----
+		-->
+		<div class="container debug">
+			<div class="row">
+				<div class="col-xs-12 visible-xs">
+					<p>Extra Small</p>
+				</div>
+				<div class="col-sm-12 visible-sm">
+					<p>Small</p>
+				</div>
+				<div class="col-md-12 visible-md">
+					<p>Medium</p>
+				</div>
+				<div class="col-lg-12 visible-lg">
+					<p>Large</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		
 		
 		
 		
@@ -41,7 +70,7 @@
 		-----
 		-----
 		-->
-		<div class="container section no-background"">
+		<div class="container section no-background" ng-controller="BioController as bioCtrl">
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-1">
 					<div class="bio-image-container">
@@ -55,17 +84,11 @@
 				</div>
 				<div class="col-xs-12 col-sm-11 bio-description">
 					<h1>Ross Kahn</h1>
-					<span id="SocialLinks" class="bio-head">
-						<!-- 
-							Populated by Handlebars 
-						-->	
-						<script id="social-links-template" type="x-handlebars-template">
-							{{#each this}}
-								<a href="{{href}}" target="_blank" class="social-link">
-									<img class="{{imgClass}}" src="{{imgSrc}}" />
-								</a>
-							{{/each}}
-						</script>
+					<span class="bio-head">
+						<!-- Social link content in "/js/bio.js" -->
+						<a ng-repeat="link in bioCtrl.socialLinks" href="{{link.href}}" target="_blank" class="social-link">
+							<img class="{{link.imgClass}}" ng-src="{{link.imgSrc}}"/>
+						</a>
 					</span>
 				</div>
 				<div class="panel-group col-xs-12 col-sm-10 col-md-8 col-sm-offset-1">
@@ -90,20 +113,43 @@
 				</div>
 			</div>
 			<div id="accordion" class="row">
-				<div id="SkillDescriptions" class="panel panel-default col-xs-12 col-sm-10 col-sm-offset-1">
-					<!-- 
-						Populated by Handlebars 
-					-->	
-					<script id="skill-description-template" type="x-handlebars-template">
-						{{#each this}}
-							<div id="{{tag}}-skill-description" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h4>{{title}}</h4>
-									{{body}}
-								</div>
-							</div>
-						{{/each}}
-					</script>
+				<div class="panel panel-default col-xs-12 col-sm-10 col-sm-offset-1">
+					<div id="usability-skill-description" class="panel-collapse collapse">
+						<!-- Skill description content in "/js/bio.js" -->
+						<div class="panel-body">
+							<h4>{{bioCtrl.bioDescriptions["usability"].title}}</h4>
+							{{bioCtrl.bioDescriptions["usability"].body}} 
+						</div>
+					</div>
+					<div id="pm-skill-description" class="panel-collapse collapse">
+						<!-- Skill description content in "/js/bio.js" -->
+						<div class="panel-body">
+							<h4>{{bioCtrl.bioDescriptions["pm"].title}}</h4>
+							{{bioCtrl.bioDescriptions["pm"].body}} 
+						</div>
+					</div>
+					<div id="leader-skill-description" class="panel-collapse collapse">
+						<!-- Skill description content in "/js/bio.js" -->
+						<div class="panel-body">
+							<h4>{{bioCtrl.bioDescriptions["leadership"].title}}</h4>
+							{{bioCtrl.bioDescriptions["leadership"].body}} 
+						</div>
+					</div>
+					<div id="learner-skill-description" class="panel-collapse collapse">
+						<!-- Skill description content in "/js/bio.js" -->
+						<div class="panel-body">
+							<h4>{{bioCtrl.bioDescriptions["learning"].title}}</h4>
+							{{bioCtrl.bioDescriptions["learning"].body}} 
+						</div>
+					</div>
+					<div id="achievement-skill-description" class="panel-collapse collapse">
+						<!-- Skill description content in "/js/bio.js" -->
+						<div class="panel-body">
+							<h4>{{bioCtrl.bioDescriptions["achievement"].title}}</h4>
+							{{bioCtrl.bioDescriptions["achievement"].body}} 
+						</div>
+						</div>
+					</div>
 				</div>
 			</div>
 				
@@ -114,7 +160,142 @@
 			</div>
 		
 		
-			
+		
+		
+		
+		
+		
+		<!-- 
+		-----
+		-----
+		Skills Section
+		-----
+		-----
+		-->
+		<div class="container section">
+			<div class="row">
+				<div class="col-xs-1 hidden-xs">
+					<i class="section-glyphicon glyphicon glyphicon-list-alt"></i>
+				</div>
+				<div class="col-xs-11">
+					<h1>Recent Technical Skills</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="key col-xs-11 col-sm-offset-1">
+					<span class="key"><i class="glyphicon glyphicon-bullhorn"></i> = Work Experience</span>
+					<span class="key"><i class="glyphicon glyphicon-certificate"></i> = Certified</span>
+				</div>
+			</div>
+			<!--<div class="row">
+				
+				<div class="col-xs-8 col-sm-offset-1">
+					<ul class="bargraph">
+						<li class="axis-x">
+							<span>Familiar</span>
+							<span class="highend">Experienced</span>
+						</li>
+						<li class="toptop">
+							C#
+							<i class="skill glyphicon glyphicon-bullhorn"></i>
+							<i class="skill glyphicon glyphicon-certificate"></i>
+						</li>
+						<li class="midmid">
+							JavaScript
+							<i class="skill glyphicon glyphicon-bullhorn"></i>
+							<i class="skill glyphicon glyphicon-certificate"></i>
+						</li>
+						<li class="topmid">
+							CSS3 / HTML5
+							<i class="skill glyphicon glyphicon-bullhorn"></i>
+							<i class="skill glyphicon glyphicon-certificate"></i>
+						</li>
+						<li class="midtop">
+							Visual Basic
+							<i class="skill glyphicon glyphicon-bullhorn"></i>
+							<i class="skill glyphicon glyphicon-certificate"></i>
+						</li>
+						<li class="midsm">
+							SVN
+							<i class="skill glyphicon glyphicon-bullhorn"></i>
+						</li>
+						<li class="smtop">
+							MVVM
+							<i class="skill glyphicon glyphicon-bullhorn"></i>
+							<i class="skill glyphicon glyphicon-certificate"></i>
+						</li>
+						<li class="midtop">
+							Bootstrap
+							<i class="skill glyphicon glyphicon-certificate"></i>
+						</li>
+						<li class="midtop">
+							Git
+							<i class="skill glyphicon glyphicon-bullhorn"></i>
+						</li>
+						<li class="midmid">
+							Sass
+							<i class="skill glyphicon glyphicon-certificate"></i>
+						</li>
+						<li class="topsm">
+							Ruby
+							<i class="skill glyphicon glyphicon-bullhorn"></i>
+						</li>
+						<li class="smmid">
+							Ember
+						</li>
+						<li class="midsm">
+							Ruby on Rails
+							<i class="skill glyphicon glyphicon-bullhorn"></i>
+						</li>
+						<li class="topmid">
+							Java
+							<i class="skill glyphicon glyphicon-bullhorn"></i>
+						</li>
+						<li class="smmid">
+							Python
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-3">
+					<ul class="bargraph">
+						<li></li>
+						<li class="axis-y">
+							<span>+Recent</span>
+						</li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y"></li>
+						<li class="axis-y">
+							<span>-Recent</span>
+						</li>
+					</ul>
+				</div>-->
+			</div>
+		</div>
+		
+		<div class="container">
+			<div>
+				<span class="section-border"></span>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
 		
 		<!-- 
 		-----
@@ -133,27 +314,8 @@
 				</div>
 			</div>
 			<div class="row">
-				<div id="ProfCerts" class="col-sm-offset-1">
-					<!-- 
-						Populated by Handlebars 
-					-->	
-					<script id="certification-template" type="x-handlebars-template">	
-						{{#each this}}
-							<div class="xcert-container">
-								<div class="xdetails">
-									<img class="xlogo round" src="{{imgSrc}}" />
-									<span class="text title">{{title}}</span>
-									<span class="text source">{{source}}</span>
-									
-								</div>
-								<div class="xextra-details">
-									<span class="text skills">
-										{{description}}
-									</span>
-								</div>
-							</div>
-						{{/each}}
-					</script>
+				<div class="col-sm-offset-1">
+					<rtk-certifications certType="prof"></rtk-certifications>
 				</div>
 			</div>
 		</div>
@@ -173,22 +335,67 @@
 					<h1>Continuous Improvement Certifications</h1>
 				</div>
 			</div>
-			<div id="CSCerts" class="col-sm-offset-1">
-					<!-- 
-						Populated by Handlebars 
-					-->				
+			<div class="col-sm-offset-1">
+					<!-- Populated by Javascript -->
+					<!-- ADVANCED -->
+					
+				
+				<rtk-certifications cert-type="ci"></rtk-certifications>
+				
+				
+				<div class="xcert-container">
+					<div class="xdetails">
+						<img class="xlogo" src="images/codeschool/css.png" />
+						<span class="text title">CSS</span>
+						<span class="text source">Codeschool</span>
+						
+					</div>
+					<div class="xextra-details">
+						<span class="text skills">Clearing, Box bindings, Best Practices, Layout and Specificity Safety, Images, Sprites, Pseudo Classes</span>
+					</div>
+				</div>
+				<div class="xcert-container">
+					<div class="xdetails">
+						<img class="xlogo" src="images/codeschool/javascript2.png" />
+						<span class="text title">Javascript pt. 2</span>
+						<span class="text source">Codeschool</span>
+						
+					</div>
+					<div class="xextra-details">
+						<span class="text skills">Loops, Conditionals, Built-Ins, Declarations, Arrays</span>
+					</div>
+				</div>
+				<div class="xcert-container">
+					<div class="xdetails">
+						<img class="xlogo" src="images/codeschool/javascript1.png" />
+						<span class="text title">Javascript pt. 1</span>
+						<span class="text source">Codeschool</span>
+						
+					</div>
+					<div class="xextra-details">
+						<span class="text skills">JS Console, Values, Variables, Files</span>
+					</div>
+				</div>
+				<div class="xcert-container">
+					<div class="xdetails">
+						<img class="xlogo" src="images/codeschool/frontend1.png" />
+						<span class="text title">Front-End 1</span>
+						<span class="text source">Codeschool</span>
+						
+					</div>
+					<div class="xextra-details">
+						<span class="text skills">HTML, CSS, Classes and Layout, Images, Fonts and Forms</span>
+					</div>
+				</div>
+				
 			</div>
-		</div> 
+		</div> <!-- End Container -->
 		
 		<div class="container">
 			<div class="row">
 				<span class="section-border"></span>
 			</div>
 		</div>
-		
-		
-		
-		
 		
 		<!-- Education -->
 		<div class="container section">
@@ -440,7 +647,9 @@
 				</div>
 			</div>
 		</footer>
-		<script src="js/vendor/handlebars.js"></script>
-		<script src="js/app.js"></script> 
+		<script type="text/javascript" src="js\vendor\angular.min.js"></script>
+		<script src="js\app.js"></script> 
+		<script src="js\bio.js"></script> 
+		<script src="js\certifications.js"></script> 
 	</body>
 </html>

@@ -141,7 +141,7 @@ i.glyphicon-new-window{
 .key{
 	display: inline-block;
 	margin-right: 1.5em;
-	//margin-bottom: 1em;
+	margin-bottom: 1em;
 	color: white;
 	@include respond-to(max-width, 481px){
 		display: none;
@@ -174,40 +174,57 @@ ul.bargraph li {
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-}
-.tech-skill{
-	display: inline-block;
-	margin-top: 3%;
-	//border: 1px $text-color;
-	//border-style: none dashed none dashed;
-	&.top{
-		margin-right: 5%;
-		font-size: 1.55em;
-		font-weight: bold;
-		color: $header-color;
-	}
-	&.mid{
-		margin-right: 2%;
-		font-size: 1.2em;
-		color: $header-color;
-	}
-	&.low{
-		margin-right: .5%;
-		font-size: .9em;
-	}
-	.name{
-		line-height: .8;		
-	}
-	.skill-icons{
-		font-size: .75em;
-		color: scale-color($text-color, $lightness: -20%);
-		@include respond-to(max-width, 481px){
-			display: none;
-		}
-	}
 	
+	&.toptop{
+		width: 100%;
+		background: $skill-toptop;
+	}
+	&.topmid{
+		width: 90%;
+		background-color: $skill-topmid;
+	}
+	&.topsm{
+		width: 80%;
+		background-color: $skill-topsm;
+	}
+	&.midtop{
+		width: 70%;
+		background-color: $skill-midtop;
+	}
+	&.midmid{
+		width: 60%;
+		background-color: $skill-midmid;
+	}
+	&.midsm{
+		width: 50%;
+		background-color: $skill-midsm;
+	}
+	&.smtop{
+		width: 40%;
+		background-color: $skill-smtop;
+	}
+	&.smmid{
+		width: 30%;
+		background-color: $skill-smmid;
+	}
+	&.axis-x{
+		width: 100%;
+		font-style: none;
+		padding-left: 0px;
+		border-bottom: 1px solid $text-color;
+		color: $text-color;
+		.highend{
+			float: right;
+		}
+	}&.axis-y{
+		font-style: none;
+		padding-left: 3px;
+		color: $text-color;
+		border-left: 1px solid $text-color;
+		margin-bottom: 0px;
+		padding-bottom: 5px;
+	}
 }
-
 
 
 /* 
@@ -420,7 +437,7 @@ ul.bargraph li {
 	width: 160px;
 	height: 280px;
 	color: $text-color;
-	margin: 1em 2% 1em 2%;
+	margin: 1em 10px 1em 10px;
 	float: left;
 	@include respond-to(max-width, 385px){
 		font-size: .8em;

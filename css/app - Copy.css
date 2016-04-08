@@ -79,6 +79,7 @@ i.glyphicon-new-window {
 .key {
   display: inline-block;
   margin-right: 1.5em;
+  margin-bottom: 1em;
   color: white; }
   @media screen and (max-width: 481px) {
     .key {
@@ -111,30 +112,45 @@ ul.bargraph li {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; } }
-
-.tech-skill {
-  display: inline-block;
-  margin-top: 3%; }
-  .tech-skill.top {
-    margin-right: 5%;
-    font-size: 1.55em;
-    font-weight: bold;
-    color: #FFF; }
-  .tech-skill.mid {
-    margin-right: 2%;
-    font-size: 1.2em;
-    color: #FFF; }
-  .tech-skill.low {
-    margin-right: .5%;
-    font-size: .9em; }
-  .tech-skill .name {
-    line-height: .8; }
-  .tech-skill .skill-icons {
-    font-size: .75em;
-    color: #a2a2a2; }
-    @media screen and (max-width: 481px) {
-      .tech-skill .skill-icons {
-        display: none; } }
+  ul.bargraph li.toptop {
+    width: 100%;
+    background: #337ab7; }
+  ul.bargraph li.topmid {
+    width: 90%;
+    background-color: #005b31; }
+  ul.bargraph li.topsm {
+    width: 80%;
+    background-color: #008448; }
+  ul.bargraph li.midtop {
+    width: 70%;
+    background-color: #009753; }
+  ul.bargraph li.midmid {
+    width: 60%;
+    background-color: #00aa5e; }
+  ul.bargraph li.midsm {
+    width: 50%;
+    background-color: #00b765; }
+  ul.bargraph li.smtop {
+    width: 40%;
+    background-color: #00ce72; }
+  ul.bargraph li.smmid {
+    width: 30%;
+    background-color: #BA0038; }
+  ul.bargraph li.axis-x {
+    width: 100%;
+    font-style: none;
+    padding-left: 0px;
+    border-bottom: 1px solid #CBCBCB;
+    color: #CBCBCB; }
+    ul.bargraph li.axis-x .highend {
+      float: right; }
+  ul.bargraph li.axis-y {
+    font-style: none;
+    padding-left: 3px;
+    color: #CBCBCB;
+    border-left: 1px solid #CBCBCB;
+    margin-bottom: 0px;
+    padding-bottom: 5px; }
 
 /* 
 	GLYPHICON
@@ -305,7 +321,7 @@ ul.bargraph li {
   width: 160px;
   height: 280px;
   color: #CBCBCB;
-  margin: 1em 2% 1em 2%;
+  margin: 1em 10px 1em 10px;
   float: left; }
   @media screen and (max-width: 385px) {
     .xcert-container {
@@ -349,4 +365,4 @@ ul.bargraph li {
     font-style: italic;
     text-align: left; }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=app%20-%20Copy.css.map */
