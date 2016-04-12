@@ -1,14 +1,11 @@
 /*
 	PARENT CONTAINERS
 */
-.debug {
-  display: none; }
-
 html {
   font-size: 10px; }
 
 body {
-  background-image: url("../images/background/ignasi_dark.png");
+  background-image: url("../images/background/shirt.png");
   font-size: 2em;
   font-family: "europa","Helvetica Neue",sans-serif;
   color: #CBCBCB; }
@@ -288,12 +285,12 @@ ul.bargraph li {
   color: black;
   height: 1px;
   background: white;
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#000));
-  background: -o-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#000));
-  background: -moz-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#000)); }
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#141414));
+  background: -o-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#141414));
+  background: -moz-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#141414)); }
 
 .section-border.small {
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 75, from(#fff), to(#000));
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 75, from(#fff), to(#141414));
   margin-bottom: 1em;
   margin-top: 1.25em; }
 

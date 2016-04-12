@@ -162,6 +162,4 @@
 	$("#CSCerts").append(template(csCerts));
 	
 	
-	
-	
 })();

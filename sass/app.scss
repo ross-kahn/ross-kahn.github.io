@@ -1,6 +1,9 @@
-$ghost-bg: "../images/background/ignasi_pattern_s.png" !default;
-$ghost-dark: "../images/background/ignasi_dark.png";
-$black-bg: "../images/background/congruent_outline.png";
+$ghosts: "../images/background/ignasi_dark.png";
+$congruent: "../images/background/congruent_outline.png";
+$robots: "../images/background/robots.png";
+$shirt: "../images/background/shirt.png";
+
+$background-url: $shirt;
 
 $text-color: #CBCBCB; //#444;
 $section-color: #141414; //#EBEBEB for ghost, #333333 for black
@@ -8,24 +11,6 @@ $link-color: #337ab7; //#FFF; //#333;
 $active-link: #94CDFF;
 $header-color: #FFF;
 
-$skill-toptop: #337ab7;//#006CBF;
-//$skill-topmid: scale-color($skill-toptop, $saturation: 20%, $lightness: -20%);
-//$skill-topsm: scale-color($skill-toptop, $saturation: 30%, $lightness: -30%);
-//$skill-midtop: scale-color($skill-toptop, $saturation: 40%, $lightness: -40%);//#BA0038;
-//$skill-midmid: scale-color(#5C66CC, $lightness: -20%); 
-//$skill-midsm: scale-color(#5C66CC, $lightness: -30%); 
-//$skill-smtop: scale-color(#5C66CC, $lightness: -40%);//#426D37;
-//$skill-smmid: scale-color(#5C66CC, $lightness: -50%);
-
-$skill-topmid: rgb(0,91,49);
-$skill-topsm: rgb(0,132,72);
-$skill-midtop: rgb(0,151,83);
-$skill-midmid: rgb(0,170,94);
-$skill-midsm: rgb(0,183,101);
-$skill-smtop: rgb(0,206,114); 
-$skill-smmid: #BA0038;
-
-$debug: false;
 
 @mixin respond-to($val, $query){
 	@media screen and ($val: $query){
@@ -37,20 +22,13 @@ $debug: false;
 	PARENT CONTAINERS
 */
 
-.debug{
-	@if($debug){
-		position: fixed;
-	} @else{
-		display: none;
-	}
-}
 
 html{
 	font-size: 10px;
 }
 
 body{
-	background-image: url($ghost-dark);
+	background-image: url($background-url);
 	font-size: 2em;
 	font-family: "europa","Helvetica Neue",sans-serif;
 	color: $text-color;
@@ -401,13 +379,13 @@ ul.bargraph li {
     color:black;
     height:1px;
     background:white;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#000));
-	background: -o-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#000));
-	background: -moz-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#000));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to($section-color));
+	background: -o-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to($section-color));
+	background: -moz-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to($section-color));
 }
 
 .section-border.small{
-	background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 75, from(#fff), to(#000));
+	background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 75, from(#fff), to($section-color));
 	margin-bottom: 1em;
 	margin-top: 1.25em;
 }
