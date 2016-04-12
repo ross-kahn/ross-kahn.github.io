@@ -63,6 +63,9 @@ h1 {
 
 h2{
 	color: white;
+	.archived{
+		font-size: 1em;
+	}
 }
 
 h3{
@@ -74,7 +77,9 @@ h4{
 	color: lighten($text-color, 10%);
 	margin-top: 0px;
 }
-
+h5{
+	font-size: 1em !important;
+}
 
 
 
@@ -346,6 +351,8 @@ ul.bargraph li {
 .project-links li{
 	padding-bottom: 10px;
 }
+
+
 
 
 /* 

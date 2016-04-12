@@ -32,6 +32,8 @@ h1 {
 
 h2 {
   color: white; }
+  h2 .archived {
+    font-size: 1em; }
 
 h3 {
   color: #e5e5e5; }
@@ -40,6 +42,9 @@ h4 {
   font-size: 1.33333em;
   color: #e5e5e5;
   margin-top: 0px; }
+
+h5 {
+  font-size: 1em !important; }
 
 /* 
 	NAVIGATION 

@@ -146,8 +146,6 @@
 		},
 	];
 	
-	
-	
 	var templateScript = $("#social-links-template").html();
 	var template = Handlebars.compile(templateScript);
 	$("#SocialLinks").append(template(socialLinks));
@@ -161,5 +159,13 @@
 	$("#ProfCerts").append(template(profCerts));
 	$("#CSCerts").append(template(csCerts));
 	
-	
 })();
+
+$(function(){
+	// When everything is ready, expand the first skill description
+	var $collapsible = $('#usability-skill-description');
+	$collapsible.collapse({
+		toggle: true,
+		parent: '#accordion'
+	});
+});
