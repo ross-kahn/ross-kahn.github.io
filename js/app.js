@@ -53,6 +53,11 @@
 	var csImgPath= "images\\codeschool\\";
 	var csCerts= [
 		{
+			title: "Backbone pt. 1",
+			source: "Codeschool",
+			description: "Models, Views, Event Binding, Collections, Collection Views, Router, History",
+			imgSrc: csImgPath + "backbone1.png"
+		},{
 			title: "Angular pt. 1",
 			source: "Codeschool",
 			description: "Expressions, Directives, Forms, Custom Directives, Services",
