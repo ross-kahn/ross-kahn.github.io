@@ -6,22 +6,23 @@ html {
 
 body {
   background-image: url("../images/background/shirt.png");
-  font-size: 2em;
   font-family: "europa","Helvetica Neue",sans-serif;
-  color: #CBCBCB; }
+  color: #CBCBCB;
+  font-size: 2em; }
 
 .section {
   padding-top: 2.5em;
   background-color: #141414;
   padding-bottom: 2.5em; }
-  .section.first {
-    margin-top: 4.5em; }
   .section.no-background {
     background: inherit;
     padding-bottom: 0px; }
-
-.container-fluid {
-  max-width: 1170px; }
+  .section.bio-content {
+    padding-top: 0px;
+    padding-bottom: 0px; }
+  .section.accordion {
+    padding-top: 0px;
+    padding-bottom: 1em; }
 
 h1 {
   font-size: 1.9em;
@@ -32,8 +33,6 @@ h1 {
 
 h2 {
   color: white; }
-  h2 .archived {
-    font-size: 1em; }
 
 h3 {
   color: #e5e5e5; }
@@ -42,9 +41,6 @@ h4 {
   font-size: 1.33333em;
   color: #e5e5e5;
   margin-top: 0px; }
-
-h5 {
-  font-size: 1em !important; }
 
 /* 
 	NAVIGATION 
@@ -63,81 +59,6 @@ a.external {
 .social-link:hover, .social-link:focus, .social-link:active {
   text-decoration: none; }
 
-i.glyphicon-new-window {
-  font-size: .5em;
-  color: #337ab7;
-  padding-left: 2px; }
-
-/*
-	SKILLS
-*/
-.skill {
-  padding-left: 10px;
-  color: #CBCBCB; }
-  @media screen and (max-width: 481px) {
-    .skill {
-      display: none; } }
-
-.key {
-  display: inline-block;
-  margin-right: 1.5em;
-  color: white; }
-  @media screen and (max-width: 481px) {
-    .key {
-      display: none; } }
-
-.bargraph {
-  list-style: none;
-  padding-top: 20px;
-  max-width: 800px;
-  padding-left: 0px; }
-
-ul.bargraph li {
-  height: 35px;
-  color: white;
-  text-align: left;
-  font-style: italic;
-  font-weight: bolder;
-  font-size: .85em;
-  line-height: 35px;
-  padding: 0px 20px;
-  margin-bottom: 5px; }
-  @media screen and (max-width: 620px) {
-    ul.bargraph li {
-      font-size: .65em; } }
-  @media screen and (max-width: 539px) {
-    ul.bargraph li {
-      padding-left: 5px; } }
-  @media screen and (max-width: 358px) {
-    ul.bargraph li {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; } }
-
-.tech-skill {
-  display: inline-block;
-  margin-top: 3%; }
-  .tech-skill.top {
-    margin-right: 5%;
-    font-size: 1.55em;
-    font-weight: bold;
-    color: #FFF; }
-  .tech-skill.mid {
-    margin-right: 2%;
-    font-size: 1.2em;
-    color: #FFF; }
-  .tech-skill.low {
-    margin-right: .5%;
-    font-size: .9em; }
-  .tech-skill .name {
-    line-height: .8; }
-  .tech-skill .skill-icons {
-    font-size: .75em;
-    color: #a2a2a2; }
-    @media screen and (max-width: 481px) {
-      .tech-skill .skill-icons {
-        display: none; } }
-
 /* 
 	GLYPHICON
 */
@@ -147,6 +68,11 @@ ul.bargraph li {
   float: right;
   line-height: 1.1;
   color: #FFF; }
+
+i.glyphicon-new-window {
+  font-size: .5em;
+  color: #337ab7;
+  padding-left: 2px; }
 
 /* 
 	BIOGRAPHY 
@@ -161,10 +87,6 @@ ul.bargraph li {
     .bio-image-container {
       width: 150px;
       height: 150px; } }
-
-.bio-content {
-  background-color: #141414;
-  color: #CBCBCB; }
 
 .bio-head {
   display: inline-block;
@@ -193,10 +115,6 @@ ul.bargraph li {
 #bio-intro {
   font-size: 1.15em;
   line-height: 1.4; }
-
-#accordion {
-  background-color: #141414;
-  padding-bottom: 1em; }
 
 .panel-default {
   border: none;
@@ -272,7 +190,6 @@ ul.bargraph li {
 .main-foot {
   border-top: 1px solid #444;
   padding: 2.25em;
-  opacity: .7;
   background-color: #141414;
   font-size: .8em; }
   .main-foot div {
@@ -292,17 +209,15 @@ ul.bargraph li {
   background: white;
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#141414));
   background: -o-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#141414));
-  background: -moz-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#141414)); }
-
-.section-border.small {
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 75, from(#fff), to(#141414));
-  margin-bottom: 1em;
-  margin-top: 1.25em; }
+  background: -moz-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#141414));
+  background: -ms-radial-gradient(50% 50%, 50% 50%, #fff, #141414);
+  max-width: 1140px; }
+  .section-border.small {
+    max-width: 900px;
+    margin: 0px auto 0px auto;
+    text-align: center; }
 
 /* CERTIFICATION TESTS */
-.certs-parent {
-  width: 100%; }
-
 .xcert-container {
   width: 160px;
   height: 280px;

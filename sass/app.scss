@@ -18,20 +18,20 @@ $header-color: #FFF;
 	}
 }
 
+
+
 /*
 	PARENT CONTAINERS
 */
-
-
 html{
 	font-size: 10px;
 }
 
 body{
 	background-image: url($background-url);
-	font-size: 2em;
 	font-family: "europa","Helvetica Neue",sans-serif;
 	color: $text-color;
+	font-size: 2em;	// 20px context
 }
 
 
@@ -40,18 +40,21 @@ body{
 	padding-top: 2.5em;
 	background-color: $section-color;
 	padding-bottom: 2.5em;
-
-	&.first{
-		margin-top: 4.5em;
-	}
+	
 	&.no-background{
 		background: inherit;
 		padding-bottom: 0px;
 	}
+	&.bio-content{
+		padding-top: 0px;
+		padding-bottom: 0px;		
+	}
+	&.accordion{
+		padding-top: 0px;
+		padding-bottom: 1em;
+	}
 }
-.container-fluid{
-	max-width: 1170px;
-}
+
 
 h1 {
 	font-size: 1.9em;
@@ -63,9 +66,6 @@ h1 {
 
 h2{
 	color: white;
-	.archived{
-		font-size: 1em;
-	}
 }
 
 h3{
@@ -77,10 +77,6 @@ h4{
 	color: lighten($text-color, 10%);
 	margin-top: 0px;
 }
-h5{
-	font-size: 1em !important;
-}
-
 
 
 /* 
@@ -103,93 +99,6 @@ a.external{
 		text-decoration: none;
 	}
 }
-i.glyphicon-new-window{
-	font-size: .5em;
-	color: $link-color;
-	padding-left: 2px;
-}
-
-
-
-/*
-	SKILLS
-*/
-.skill{
-	padding-left: 10px;
-	color: $text-color;
-	@include respond-to(max-width, 481px){
-		display: none;
-	}
-}
-.key{
-	display: inline-block;
-	margin-right: 1.5em;
-	//margin-bottom: 1em;
-	color: white;
-	@include respond-to(max-width, 481px){
-		display: none;
-	}
-}
-.bargraph {
-    list-style: none;
-    padding-top: 20px;
-    max-width:800px;
-	padding-left: 0px;
-}
-ul.bargraph li {
-    height: 35px;
-    color: white;
-    text-align: left;
-    font-style: italic;
-    font-weight:bolder;
-    font-size: .85em;
-    line-height: 35px;
-    padding: 0px 20px;
-    margin-bottom: 5px;
-	@include respond-to(max-width, 620px){
-		font-size: .65em;
-	}
-	@include respond-to(max-width, 539px){
-		padding-left: 5px;
-	}
-	@include respond-to(max-width, 358px){
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-}
-.tech-skill{
-	display: inline-block;
-	margin-top: 3%;
-	//border: 1px $text-color;
-	//border-style: none dashed none dashed;
-	&.top{
-		margin-right: 5%;
-		font-size: 1.55em;
-		font-weight: bold;
-		color: $header-color;
-	}
-	&.mid{
-		margin-right: 2%;
-		font-size: 1.2em;
-		color: $header-color;
-	}
-	&.low{
-		margin-right: .5%;
-		font-size: .9em;
-	}
-	.name{
-		line-height: .8;		
-	}
-	.skill-icons{
-		font-size: .75em;
-		color: scale-color($text-color, $lightness: -20%);
-		@include respond-to(max-width, 481px){
-			display: none;
-		}
-	}
-	
-}
 
 
 
@@ -203,7 +112,11 @@ ul.bargraph li {
 	line-height: 1.1;
 	color: $header-color;
 }
-
+i.glyphicon-new-window{
+	font-size: .5em;
+	color: $link-color;
+	padding-left: 2px;
+}
 
 
 
@@ -223,12 +136,6 @@ ul.bargraph li {
 	}
 }
 
-.bio-content{
-	background-color: $section-color;
-	color: $text-color;
-	//padding-bottom: .25em;
-
-}
 
 .bio-head{
 	display: inline-block;
@@ -259,11 +166,6 @@ ul.bargraph li {
 #bio-intro{
 	font-size: 1.15em;
 	line-height: 1.4;
-}
-
-#accordion{
-	background-color: $section-color;
-	padding-bottom: 1em;
 }
 
 .panel-default{
@@ -361,7 +263,6 @@ ul.bargraph li {
 .main-foot{
 	border-top: 1px solid #444;
 	padding: 2.25em;
-	opacity: .7;
 	background-color: $section-color;
 	font-size: .8em;
 	& div{
@@ -389,18 +290,17 @@ ul.bargraph li {
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to($section-color));
 	background: -o-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to($section-color));
 	background: -moz-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to($section-color));
+	background: -ms-radial-gradient(50% 50%, 50% 50%, #fff, $section-color);
+	max-width: 1140px;
+	&.small{
+		max-width: 900px;
+		margin: 0px auto 0px auto;
+		text-align: center;
+	}
 }
 
-.section-border.small{
-	background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 75, from(#fff), to($section-color));
-	margin-bottom: 1em;
-	margin-top: 1.25em;
-}
 
 /* CERTIFICATION TESTS */
-.certs-parent{
-	width: 100%;
-}
 .xcert-container{
 	width: 160px;
 	height: 280px;
