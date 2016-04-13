@@ -123,7 +123,7 @@
 		{
 			title: "CAPM",
 			source: "PMI",
-			description: "Certified Associate in Project Management. Proficiency in management of integration, scope, time, cost, quality, human resources, communications, risks, procurements, and stakeholders.",
+			description: "Proficiency in managing integration, scope, time, cost, quality, human resources, communications, risks, procurements, and stakeholders.",
 			imgSrc: profImgPath + "pmi.gif"
 		},
 		{
