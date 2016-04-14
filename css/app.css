@@ -139,31 +139,24 @@ i.glyphicon-new-window {
 	EDUCATION
 */
 .edu-container {
-  margin-bottom: 1em; }
+  margin-bottom: 1.5em; }
 
 .edu-details {
-  display: inline-block;
-  padding-right: 1em;
-  border-right: 1px solid #CBCBCB;
-  margin-left: 1em;
+  float: left;
+  padding-right: 1.5em;
   font-style: italic; }
-  .edu-details:first-of-type {
-    margin-left: 0px; }
-  .edu-details:last-of-type {
-    border: none; }
 
 .minor-box {
-  display: inline-block;
-  margin-right: 2em; }
+  float: left;
+  padding-bottom: .5em; }
+  .minor-box:first-of-type {
+    width: 15em; }
   .minor-box > p {
     margin: 0; }
   .minor-box > h3 {
     margin: 0;
     font-size: 1.4em;
     padding-bottom: 10px; }
-
-.row.education {
-  margin-bottom: 1.5em; }
 
 /* 
 	Projects 

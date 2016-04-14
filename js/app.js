@@ -48,7 +48,11 @@
 			tag: "achievement",
 			title: "Achievement",
 			body: "I'm constantly working to be the best at what I do. I take pride and ownership in any project that I'm a part of, and during work hours I'm using my entire arsenal of knowledge and experience to make my projects the best they can be. After hours I'm determinedly working to expand and reinforce that arsenal of knowledge by doing side projects, completing Codeschool courses, and earning professional certifications like the CAPM."
-		}
+		},{
+			tag: "people",
+			title: "The Joy of Software",
+			body: "I study both Software Engineering and Psychology, which allows me to understand both computers and the human mind. I also study both Usability and Game Design, which allows me to understand what people need in order to master their software, and also why they keep wanting to use it. People are the reason why I do what I do, and I think my background in these four areas give me a unique perspective on how to make awesome products."
+		},
 	];
 	var csImgPath= "images\\codeschool\\";
 	var csCerts= [
