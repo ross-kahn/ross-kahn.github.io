@@ -237,8 +237,11 @@
 		<span class="section-border"></span>
 		
 		
+		
+		
+		
 		<!-- Selected Works -->
-		<div class="section">
+		<div id="Projects" class="section">
 			<div class="row">
 				<div class="col-xs-1 hidden-xs">
 					<i class="section-glyphicon glyphicon glyphicon-bullhorn"></i>
@@ -247,121 +250,61 @@
 					<h1>Managed Projects</h1>
 				</div>			
 			</div>
-			
-			<div class="project">
-				<div class="row project-row">
-					<div class="col-sm-3 col-sm-offset-1">
-						<h2>jobSalt</h2>
-						<span>2014</span>
+			<script id="project-template" type="x-handlebars-template">	
+				{{#each this}}
+					<div class="project">
+						<div class="row project-row">
+							<div class="col-sm-4 col-sm-offset-1">
+								<h2>{{title}}</h2>
+								<span>
+									<span class="proj-details title">Role:</span>
+									<span class="proj-details">{{position}}</span>
+								</span><br>
+								<span>
+									<span class="proj-details title">Sponsor:</span>
+									<span class="proj-details">{{org}}</span>
+								</span><br>
+								<span>
+									<span class="proj-details title">Done:</span>
+									<span class="proj-details">{{year}}</span>
+								</span>
+							</div>
+							<div class="col-sm-7">
+								<ul class="project-text">
+									{{#each bullets}}
+										<li class="bullet">{{this}}</li>
+									{{/each}}
+								</ul>
+								{{#if hasLinks}}
+									<ul class="project-links">
+										{{#each links}}
+											<li>
+												<a href="{{href}}" target="_blank" class="social-link">
+													<img class="icon round" src="{{icon}}"/>
+													
+													{{title}}
+													
+													<i class='glyphicon glyphicon-new-window'></i>
+												</a>
+											</li>
+										{{/each}}
+									</ul>
+								{{/if}}
+							</div>
+						</div>
 					</div>
-					<div class="col-sm-8 col-lg-8">
-						<ul class="project-text">
-							<li>Job search, alumni connection, salary information, and housing review app for students</li>
-							<li>Clients were the RIT Office of Cooperative Education and the same office at the University of Arizona</li>
-							<li>Built using: C#, MVC .NET, Bootstrap + HTML5 + CSS3, Visual Studio 2013</li>
-						</ul>
-						<ul class="project-links">
-							<li>
-								<a href="https://github.com/ross-kahn/jobsalt" target="_blank" class="social-link">
-									<img class="icon" src="images\icons\github_dark.png"/>
-									
-									Browse project on Github
-									
-									<i class='glyphicon glyphicon-new-window'></i>
-								</a>
-							</li>
-							<li>
-								<a href="http://www.se.rit.edu/~oce-connect/index.php" target="_blank" class="social-link">
-									<img class="icon-big" src="images\projects\jobSalt-logo.png"/>
-									
-									Project Page
-									
-									<i class='glyphicon glyphicon-new-window'></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<span class="section-border small"></span>
-			
-			<div class="project">
-				<div class="row project-row">
-					<div class="col-sm-3 col-sm-offset-1">
-						<h2>StaffInSight</h2>
-						<span>2013</span>
-					</div>
-					<div class="col-sm-8 col-lg-7">
-						<ul class="project-text">
-							<li>Scheduling and resource management app for small businesses</li>
-							<li>Client was the Insight Lab, a science education technology lab</li>
-							<li>Built using Ruby on Rails</li>
-						</ul>
-						<ul class="project-links">
-							<li>
-								<a href="https://github.com/ross-kahn/staffinsight" target="_blank" class="social-link">
-									<img class="icon" src="images/icons\github_dark.png"/>
-									
-									Browse project on Github
-									
-									<i class='glyphicon glyphicon-new-window'></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<span class="section-border small"></span>
-			
-			<div class="project">
-				<div class="row project-row">
-					<div class="col-sm-3 col-sm-offset-1">
-						<h2>Committee Tracking</h2>
-						<span>2013</span>
-					</div>
-					<div class="col-sm-8 col-lg-7">
-						<ul class="project-text">
-							<li>Process improvement project for student organization</li>
-							<li>Developed work performance metrics and used software to efficiently monitor and control 17 independent committees</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<span class="section-border small"></span>
-
-			<div class="project">
-				<div class="row project-row">
-					<div class="col-sm-3 col-sm-offset-1">
-						<h2>Guinness World Record</h2>
-						<span>2011</span>
-					</div>
-					<div class="col-sm-8 col-lg-7">
-						<ul class="project-text">
-							<li>Successfully broke the world record for the number of participants in a single game of dodgeball (over 2100 people)</li>
-							<li>Required the securing of funding, organizational approval, achieving required participation numbers, coordination with local news teams, coordination with the Guinness World Record adjuticators, and more</li>
-							<li>Done by efficiently leading and managing a group of volunteers</li>
-						</ul>
-						<ul class="project-links">
-							<li>
-								<a href="https://www.youtube.com/watch?v=tK4Yc8nYaQI" target="_blank" class="social-link">
-									<img class="icon round" src="images/icons/youtube.png"/>
-									
-									Watch news coverage
-									
-									<i class='glyphicon glyphicon-new-window'></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		
+					
+					<span class="section-border small"></span>
+				{{/each}}
+			</script>
+		</div>		
 	</div>
-
+	
+	
+	
+	
+	
+	
 		<div class="main-foot row">
 			<div class="col-md-6">
 				<p>Technology</p>

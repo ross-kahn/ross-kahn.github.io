@@ -53,6 +53,11 @@
 	var csImgPath= "images\\codeschool\\";
 	var csCerts= [
 		{
+			title: "CoffeeScript",
+			source: "Codeschool",
+			description: "Variables, Functions, Applied jQuery, Conditionals, Operators, Arrays, Objects, Iterations, Classes",
+			imgSrc: csImgPath + "coffeescript.png"
+		},{
 			title: "Backbone pt. 1",
 			source: "Codeschool",
 			description: "Models, Views, Event Binding, Collections, Collection Views, Router, History",
@@ -151,6 +156,90 @@
 		},
 	];
 	
+	var projectList = [
+		{
+			title: "'jobSalt' web app",
+			position: "Project Lead",
+			org: "RIT OCE",
+			year: "2014",
+			bullets: [
+				"Job search, alumni connection, salary information, and housing review app for students",
+				"Clients were the RIT Office of Cooperative Education and the same office at the University of Arizona",
+				"Built using: C#, MVC .NET, Bootstrap + HTML5 + CSS3, Visual Studio 2013"
+			],
+			hasLinks: true,
+			links: [
+				{
+					title: "Browse project on Github",
+					icon: iconPath + "github_dark.png",
+					href: "https://github.com/ross-kahn/jobsalt" 
+				},{
+					title: "Project Page",
+					icon: iconPath + "jobSalt-logo.png",
+					href: "http://www.se.rit.edu/~oce-connect/index.php" 
+				}
+			]
+		},{
+			title: "'StaffInSight' web app",
+			position: "Assistant Director",
+			org: "Insight Lab",
+			year: "2013",
+			bullets: [
+				"Scheduling and resource management app for small businesses",
+				"Client was the Insight Lab, a science education technology lab",
+				"Built using Ruby on Rails"
+			],
+			hasLinks: true,
+			links: [
+				{
+					title: "Browse project on Github",
+					icon: iconPath + "github_dark.png",
+					href: "https://github.com/ross-kahn/staffinsight" 
+				}
+			]
+		},{
+			title: "Committee Tracking",
+			position: "Vice President",
+			org: "Phi Kappa Psi",
+			year: "2013",
+			bullets: [
+				"Process improvement project",
+				"Developed work performance metrics and used software to efficiently monitor and control 17 independent committees",
+				"Managed communication with stakeholders through visual reports and concise status updates"
+			],
+			hasLinks: false,
+		},{
+			title: "Public Relations Improvement",
+			position: "Head of PR",
+			org: "Phi Kappa Psi",
+			year: "2012",
+			bullets: [
+				"Process improvement project",
+				"Implemented PR events, both on social media and in person, which successfully increased positive organizational visibility and recruitment rates",
+				"Committee was awarded highest honor by Phi Kappa Psi National Executives for the committee's efforts, from a group of over 100 applying chapters"
+			],
+			hasLinks: false
+		},{
+			title: "Guinness World Record",
+			position: "Head of PR",
+			org: "Phi Kappa Psi",
+			year: "2011",
+			bullets: [
+				"Successfully broke the world record for the number of participants in a single game of dodgeball (over 2100 people)",
+				"Required the securing of funding, organizational approval, achieving required participation numbers, coordination with local news teams, coordination with the Guinness World Record adjuticators, and more",
+				"Done by efficiently leading and managing a group of volunteers"
+			],
+			hasLinks: true,
+			links: [
+				{
+					title: "Watch news coverage",
+					icon: iconPath + "youtube.png",
+					href: "https://www.youtube.com/watch?v=tK4Yc8nYaQI" 
+				}
+			]
+		},
+	];
+	
 	var templateScript = $("#social-links-template").html();
 	var template = Handlebars.compile(templateScript);
 	$("#SocialLinks").append(template(socialLinks));
@@ -163,6 +252,10 @@
 	template = Handlebars.compile(templateScript);
 	$("#ProfCerts").append(template(profCerts));
 	$("#CSCerts").append(template(csCerts));
+	
+	templateScript = $("#project-template").html();
+	template = Handlebars.compile(templateScript);
+	$("#Projects").append(template(projectList));
 	
 })();
 

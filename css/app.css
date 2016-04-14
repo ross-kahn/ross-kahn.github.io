@@ -184,6 +184,16 @@ i.glyphicon-new-window {
 .project-links li {
   padding-bottom: 10px; }
 
+.proj-details {
+  font-size: .85em;
+  line-height: 1;
+  display: inline-block; }
+  .proj-details.title {
+    opacity: .7; }
+
+.bullet {
+  margin-bottom: .5em; }
+
 /* 
 	Footer 
 */
