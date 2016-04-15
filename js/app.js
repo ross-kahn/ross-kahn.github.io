@@ -202,6 +202,24 @@
 				}
 			]
 		},{
+			title: "'Space Adventure' education app",
+			position: "Head of Science Education Technology",
+			org: "Insight Lab",
+			year: "2013",
+			bullets: [
+				"Re-engineered monolithic code base into stable, maintainable, and working system",
+				"Technologies included voice commands and motion capture through Kinect API, C#, and Celestia (space simulation program)",
+				"Re-architected using a command pattern to abstract the various inputs (keyboard / mouse, voice commands, motions commands, future commands) from the various outputs (Celestia commands, commands to external APIs, future commands)"
+			],
+			hasLinks: true,
+			links: [
+				{
+					title: "Browse project on Github",
+					icon: iconPath + "github_dark.png",
+					href: "https://github.com/RITInsightLab/space-adventure" 
+				}
+			]
+		},{
 			title: "Committee Tracking",
 			position: "Vice President",
 			org: "Phi Kappa Psi",
