@@ -1,5 +1,5 @@
 (function(){
-	var iconPath = "images\\icons\\";
+	var iconPath = "images//icons//";
 	var socialLinks =[
 		{
 			href: "https://www.linkedin.com/in/rosstkahn",
@@ -54,7 +54,7 @@
 			body: "I study both Software Engineering and Psychology, which allows me to understand both computers and the human mind. I also study both Usability and Game Design, which allows me to understand what people need in order to master their software, and also why they keep wanting to use it. People are the reason why I do what I do, and I think my background in these four areas give me a unique perspective on how to make awesome products."
 		},
 	];
-	var csImgPath= "images\\codeschool\\";
+	var csImgPath= "images//codeschool//";
 	var csCerts= [
 		{
 			title: "CoffeeScript",
@@ -132,7 +132,7 @@
 		},
 	];
 		
-	var profImgPath=  "images\\";
+	var profImgPath=  "images//";
 	var profCerts = [
 		{
 			title: "CAPM",
