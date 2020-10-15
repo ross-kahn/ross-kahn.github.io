@@ -1,272 +1,48 @@
 /*
-	PARENT CONTAINERS
+Error: Invalid CSS after "...gnasi_dark.png"": expected "{", was ";"
+        on line 5 of C:/Users/rossk/Documents/GitHub/ross-kahn.github.io/sass/app.scss
+
+1: ---
+2: ---
+3: 
+4: // start content
+5: $ghosts: "../images/background/ignasi_dark.png";
+6: $congruent: "../images/background/congruent_outline.png";
+7: $robots: "../images/background/robots.png";
+8: $shirt: "../images/background/shirt.png";
+9: 
+10: $background-url: $shirt;
+
+Backtrace:
+C:/Users/rossk/Documents/GitHub/ross-kahn.github.io/sass/app.scss:5
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in `block'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
 */
-html {
-  font-size: 10px; }
-
-body {
-  background-image: url("../images/background/shirt.png");
-  font-family: "europa","Helvetica Neue",sans-serif;
-  color: #CBCBCB;
-  font-size: 2em; }
-
-.section {
-  padding-top: 2.5em;
-  background-color: #141414;
-  padding-bottom: 2.5em; }
-  .section.no-background {
-    background: inherit;
-    padding-bottom: 0px; }
-  .section.bio-content {
-    padding-top: 0px;
-    padding-bottom: 0px; }
-  .section.no-top {
-    padding-top: 0px;
-    padding-bottom: 1em; }
-
-h1 {
-  font-size: 1.9em;
-  display: inline-block;
-  padding-right: .25em;
-  padding-top: .05em;
-  color: #FFF; }
-
-h2 {
-  color: white; }
-
-h3 {
-  color: #e5e5e5; }
-
-h4 {
-  font-size: 1.33333em;
-  color: #e5e5e5;
-  margin-top: 0px; }
-
-/* 
-	NAVIGATION 
-*/
-a:focus, a:active, a:hover, a[aria-expanded="true"] {
-  color: #94CDFF;
-  text-decoration: none; }
-
-a.external {
-  text-decoration: underline;
-  color: #337ab7;
-  font-weight: bold; }
-  a.external:hover {
-    color: #94CDFF; }
-
-.social-link:hover, .social-link:focus, .social-link:active {
-  text-decoration: none; }
-
-/* 
-	GLYPHICON
-*/
-.section-glyphicon {
-  font-size: 28px;
-  padding-top: 1em;
-  float: right;
-  line-height: 1.1;
-  color: #FFF; }
-
-i.glyphicon-new-window {
-  font-size: .5em;
-  color: #337ab7;
-  padding-left: 2px; }
-
-/* 
-	BIOGRAPHY 
-*/
-.bio-image-container {
-  width: 200px;
-  height: 200px; }
-  .bio-image-container > img {
-    border-radius: 50%;
-    max-width: 100%; }
-  @media screen and (max-width: 840px) {
-    .bio-image-container {
-      width: 150px;
-      height: 150px; } }
-
-.bio-head {
-  display: inline-block;
-  position: relative;
-  height: inherit;
-  bottom: .45em; }
-  @media screen and (max-width: 435px) {
-    .bio-head {
-      display: block;
-      margin-left: 10px; } }
-
-.icon {
-  height: 35px;
-  width: 35px; }
-  .icon.round {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%; }
-
-.icon-big {
-  height: 30px;
-  width: 25px;
-  margin-right: 5px;
-  margin-left: 5px; }
-
-#bio-intro {
-  font-size: 1.15em;
-  line-height: 1.4; }
-
-.panel-default {
-  border: none;
-  margin-top: 20px;
-  background-color: #141414; }
-
-.panel-body {
-  margin: 0em .25em .25em .25em;
-  border: 1px solid #CBCBCB;
-  background-color: #202020;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
-  @media screen and (max-width: 650px) {
-    .panel-body {
-      font-size: 0.85em; } }
-
-.panel-group {
-  margin-bottom: 0px; }
-
-/* 
-	EDUCATION
-*/
-.edu-container {
-  margin-bottom: 1.5em; }
-
-.edu-details {
-  float: left;
-  padding-right: 1.5em;
-  font-style: italic; }
-
-.minor-box {
-  float: left;
-  padding-bottom: .5em; }
-  .minor-box:first-of-type {
-    width: 15em; }
-  .minor-box > p {
-    margin: 0; }
-  .minor-box > h3 {
-    margin: 0;
-    font-size: 1.4em;
-    padding-bottom: 10px; }
-
-/* 
-	Projects 
-*/
-.project {
-  padding: 2.5em 0px 2.5em 0px; }
-
-.project-image {
-  max-width: 80%;
-  margin: 0 auto 0 auto; }
-
-.project-text {
-  margin-top: 20px; }
-
-.project-links {
-  list-style: none; }
-
-.project-links li {
-  padding-bottom: 10px; }
-
-.proj-details {
-  font-size: .85em;
-  line-height: 1;
-  display: inline-block; }
-  .proj-details.title {
-    opacity: .7; }
-
-.bullet {
-  margin-bottom: .5em; }
-
-/* 
-	Footer 
-*/
-.main-foot {
-  border-top: 1px solid #444;
-  padding: 2.25em;
-  background-color: #141414;
-  font-size: .8em; }
-  .main-foot div {
-    margin: auto; }
-  .main-foot p:first-of-type {
-    color: #FFF; }
-  .main-foot p:last-of-type {
-    padding-bottom: 2em; }
-
-/* OTHER */
-/* Special thanks to Josh Messer for this CSS snippet inspiration: http://jsfiddle.net/JoshMesser/55ZfK/*/
-.section-border {
-  display: block;
-  border: none;
-  color: black;
-  height: 1px;
-  background: white;
-  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#141414));
-  background: -o-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#141414));
-  background: -moz-gradient(radial, 50% 50%, 0, 50% 50%, 600, from(#fff), to(#141414));
-  background: -ms-radial-gradient(50% 50%, 50% 50%, #fff, #141414);
-  max-width: 1140px; }
-  .section-border.small {
-    max-width: 900px;
-    margin: 0px auto 0px auto;
-    text-align: center; }
-
-/* CERTIFICATION TESTS */
-.xcert-container {
-  width: 160px;
-  height: 240px;
-  color: #CBCBCB;
-  margin: .5em 2% .5em 2%;
-  float: left; }
-  @media screen and (max-width: 385px) {
-    .xcert-container {
-      font-size: .8em;
-      width: 120px;
-      height: 200px; } }
-  @media screen and (max-width: 329px) {
-    .xcert-container {
-      margin: .5em 5px .5em 5px; } }
-
-.xlogo {
-  height: 120px;
-  width: 120px;
-  display: block;
-  margin: 5px auto 5px auto; }
-  @media screen and (max-width: 600px) {
-    .xlogo {
-      height: 80px;
-      width: 80px; } }
-
-.xlogo.round {
-  border-radius: 50%; }
-
-.xdetails {
-  padding-bottom: 5px; }
-
-.xextra-details {
-  border-top: 1px solid lightgray; }
-
-.text {
-  width: 100%;
-  display: block;
-  font-size: .6em;
-  padding-left: 5px;
-  text-align: center; }
-  .text.title {
-    font-weight: bold;
-    font-size: .85em;
-    color: #FFF; }
-  .text.skills {
-    font-style: italic;
-    text-align: left; }
-
-/*# sourceMappingURL=app.css.map */
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...gnasi_dark.png\"\": expected \"{\", was \";\"\A         on line 5 of C:/Users/rossk/Documents/GitHub/ross-kahn.github.io/sass/app.scss\A \A 1: ---\A 2: ---\A 3: \A 4: // start content\A 5: $ghosts: \"../images/background/ignasi_dark.png\";\A 6: $congruent: \"../images/background/congruent_outline.png\";\A 7: $robots: \"../images/background/robots.png\";\A 8: $shirt: \"../images/background/shirt.png\";\A 9: \A 10: $background-url: $shirt;"; }

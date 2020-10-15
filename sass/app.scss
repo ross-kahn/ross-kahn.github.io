@@ -1,3 +1,7 @@
+---
+---
+
+// start content
 $ghosts: "../images/background/ignasi_dark.png";
 $congruent: "../images/background/congruent_outline.png";
 $robots: "../images/background/robots.png";
@@ -28,7 +32,6 @@ html{
 }
 
 body{
-	background-image: url($background-url);
 	font-family: "europa","Helvetica Neue",sans-serif;
 	color: $text-color;
 	font-size: 2em;	// 20px context

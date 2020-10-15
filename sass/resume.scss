@@ -133,13 +133,13 @@ tr{
 ///////////////////////////////////////
 
 .sub-section{
-	width: 49%;
-	display: inline-block;
+	
+	float: left;
 	ul{
-		list-style: none;
+		list-style-type: circle;
 		padding-left: 35px;
 		line-height: 1.2;
-		color: #A0A0A0;
+		color: #A0A0A0; 
 	}
 }
 .skill-title{
