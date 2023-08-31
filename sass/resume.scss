@@ -3,44 +3,66 @@ $section-title-color: #4398ce;
 $section-title-border-color: #dcecf7;
 $line-title-color: scale-color(#CBCBCB, $lightness: -10%);
 
-@mixin respond-to($val, $query){
-	@media screen and ($val: $query){
+@mixin respond-to($val, $query) {
+	@media screen and ($val: $query) {
 		@content;
 	}
 }
 
-html{
+html {
 	font-size: 10px;
 }
-body{
+
+body {
 	font-size: 2em;
-	font-family: "europa","Helvetica Neue",sans-serif;
+	font-family: "europa", "Helvetica Neue", sans-serif;
 }
 
-h1{
+h1 {
 	font-size: 2em;
 }
-.lead{
+
+.lead {
 	margin-bottom: 0px;
 }
-.header{
+
+.header {
 	font-size: 2em;
-	margin-top: .3em; 
+	margin-top: .3em;
 	text-align: center;
 }
-.purple{color: #aea2d0 !important;}
-.blue{	color: #80cde1 !important;}
-.gold{	color: #e0cf9b !important;}
-.green{ color: #b3d5a1 !important;}
-.red{	color: #d47a7b !important;}
-.black{ color: #202020 !important;}
-	
-.glyphicon{
-	&.section{
+
+.purple {
+	color: #aea2d0 !important;
+}
+
+.blue {
+	color: #80cde1 !important;
+}
+
+.gold {
+	color: #e0cf9b !important;
+}
+
+.green {
+	color: #b3d5a1 !important;
+}
+
+.red {
+	color: #d47a7b !important;
+}
+
+.black {
+	color: #202020 !important;
+}
+
+.glyphicon {
+	&.section {
 		top: 5px;
 		color: $section-title-color;
 	}
-	&.line{
+
+	&.line {
 		margin-right: .25em;
 	}
 }
@@ -48,7 +70,7 @@ h1{
 
 //////////////////////////
 
-.section-title{
+.section-title {
 	vertical-align: middle;
 	margin-left: .5em;
 	color: $section-title-color;
@@ -56,101 +78,108 @@ h1{
 	line-height: 2;
 }
 
-.section-header{
+.section-header {
 	border-bottom: 1px solid $section-title-border-color;
 	font-size: .85em;
 	margin-top: 1.5em;
-	&.start{
+
+	&.start {
 		margin-top: .75em;
 	}
 }
 
-.line{
+.line {
 	border-bottom: 1px solid $line-border-color;
 }
-.line-title{
+
+.line-title {
 	font-size: .75em;
 	color: $line-title-color;
 	display: inline-block;
 	width: 5em;
-	
+
 	height: 23px;
 }
 
-.line-content{
+.line-content {
 	font-size: .75em;
 	color: #202020;
 }
 
 /////////////////////////////////////////
-.experience-content{
+.experience-content {
 	margin-top: 1em;
 	font-size: .85em;
 }
-.company-detail{
+
+.company-detail,
+a {
 	font-size: .85em;
 	color: #A0A0A0;
-	ul{
+
+	ul {
 		list-style: none;
 		padding-left: 1em;
 	}
 }
-.company-detail-title{
+
+.company-detail-title {
 	color: #202020;
 }
 
 
 /////////////////////////////////////////
-table{
+table {
 	margin-top: 5px;
 }
-tr{
+
+tr {
 	height: 85px;
 }
-.cert-image-cell{
+
+.cert-image-cell {
 	width: 25%;
 }
-.cert-title{
+
+.cert-title {
 	width: 40%;
-	@include respond-to(max-width, 991px){
+
+	@include respond-to(max-width, 991px) {
 		text-align: center;
 		font-size: .85em;
 	}
-	@include respond-to(max-width, 767px){
+
+	@include respond-to(max-width, 767px) {
 		text-align: left;
 		font-size: 1em;
 	}
 }
-.cert-image{
+
+.cert-image {
 	height: 80px;
 	width: 80px;
 	border-radius: 50%;
 }
-.cert-description{
+
+.cert-description {
 	font-size: .65em;
-	color: #A0A0A0;	
+	color: #A0A0A0;
 }
+
 ///////////////////////////////////////
 
-.sub-section{
-	
+.sub-section {
+
 	float: left;
-	ul{
+
+	ul {
 		list-style-type: circle;
 		padding-left: 35px;
 		line-height: 1.2;
-		color: #A0A0A0; 
+		color: #A0A0A0;
 	}
 }
-.skill-title{
+
+.skill-title {
 	margin-top: 5px;
 }
-
-
-
-
-
-
-
-
-
