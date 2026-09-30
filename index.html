@@ -20,9 +20,8 @@
   <div class="wrap">
 
     <header class="hero">
-      <!-- To add your photo: replace the monogram and hint below with <img src="photo.jpg" alt="Ross Kahn"> -->
       <div class="photo" aria-label="Photo of Ross Kahn">
-        <img src="images/ross1.jpg" alt="Ross Kahn">
+        <img src="assets/ross1.jpg" alt="Ross Kahn">
       </div>
       <div class="intro">
         <p class="label">Madison, WI · Open to remote (USA)</p>
@@ -32,9 +31,10 @@
           survey analytics for K-12 schools at Panorama. Lately that means shipping AI features people can trust, fixing
           reliability problems at the root, and writing down what I learn so the next person moves faster.</p>
         <div class="actions">
-          <a class="btn primary" href="Ross_Kahn_Resume_Styled.pdf" target="_blank" rel="noopener">View resume
+          <a class="btn primary" href="assets/Ross_Kahn_Resume_Styled.pdf" target="_blank" rel="noopener">View resume
             <small>styled ↗</small></a>
-          <a class="btn" href="Ross_Kahn_Resume_ATS.pdf" target="_blank" rel="noopener">View resume <small>ATS plain
+          <a class="btn" href="assets/Ross_Kahn_Resume_ATS.pdf" target="_blank" rel="noopener">View resume <small>ATS
+              plain
               text ↗</small></a>
         </div>
         <div class="contact">
@@ -216,24 +216,37 @@
           <p class="label">Off the keyboard</p>
           <h2 id="shop-h">Golem Craftworks</h2>
         </div>
-        <p>I also make things out of wood. Golem Craftworks is my small shop selling handcrafted hardwood dice vaults,
-          Yahtzee sets and boxes, cut on a CNC router, detailed with a laser engraver, and finished by hand.</p>
-        <p>The shop keeps me close to the software, too: writing and tuning G-code, building fixtures, and setting up a
-          webcam feed so I can watch long cuts remotely. Before that, I ran a small sourdough bread business.</p>
+        <ul class="crafts" aria-label="What I make with">
+          <li>Dice</li>
+          <li>3D modeling</li>
+          <li>3D printing</li>
+          <li>Laser engraving</li>
+          <li>CNC</li>
+          <li>Woodshop</li>
+        </ul>
+        <p>Golem Craftworks is my small Madison shop for handcrafted dice and tabletop gaming accessories: dice,
+          hardwood
+          dice vaults, Yahtzee sets and boxes, plus the 3D models and prints behind a lot of them.</p>
+        <p>The shop keeps me close to the software, too: modeling parts, writing and tuning G-code, building fixtures,
+          and
+          setting up a webcam feed so I can watch long cuts remotely. Before that, I ran a small sourdough bread
+          business.
+        </p>
       </div>
-      <pre class="gcode" aria-label="Sample G-code"><span class="c">; dice vault lid, walnut</span>
-<span class="k">G21</span>          <span class="c">; millimeters</span>
-<span class="k">G90</span>          <span class="c">; absolute positioning</span>
-<span class="k">M3</span> S18000    <span class="c">; spindle on</span>
-<span class="k">G0</span> Z5.0
-<span class="k">G0</span> X12.0 Y12.0
-<span class="k">G1</span> Z-1.5 F300 <span class="c">; plunge</span>
-<span class="k">G1</span> X58.0 F1200
-<span class="k">G1</span> Y58.0
-<span class="k">G1</span> X12.0
-<span class="k">G1</span> Y12.0
-<span class="k">G0</span> Z5.0
-<span class="k">M5</span>           <span class="c">; spindle off</span></pre>
+      <div class="ig">
+        <div class="ig-head">
+          <p class="label">Recent work</p>
+          <a href="https://www.instagram.com/golem_craftworks" target="_blank" rel="noopener">@golem_craftworks on
+            Instagram
+            ↗</a>
+        </div>
+        <div class="ig-grid" id="ig-grid" hidden></div>
+        <a class="ig-empty" id="ig-empty" href="https://www.instagram.com/golem_craftworks" target="_blank"
+          rel="noopener">
+          <strong>See the latest builds on Instagram</strong>
+          <span>Dice, vaults, prints and works in progress, newest first.</span>
+        </a>
+      </div>
     </section>
 
     <footer>
@@ -245,6 +258,7 @@
 
   </div>
 
+  <script src="js/gallery.js" defer></script>
 </body>
 
 </html>
