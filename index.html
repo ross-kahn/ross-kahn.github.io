@@ -28,8 +28,9 @@
         <h1>Ross Kahn</h1>
         <p class="role">Full-stack software engineer, 12+ years in healthcare and education</p>
         <p class="lede">I build production software people depend on, from patient-safety systems at Epic to AI-powered
-          survey analytics for K-12 schools at Panorama. Lately that means shipping AI features people can trust, fixing
-          reliability problems at the root, and writing down what I learn so the next person moves faster.</p>
+          survey analytics for K-12 schools at Panorama. Lately that means building AI features people can trust, using
+          AI tools to dig into hard reliability and debugging problems, and writing down what I learn so the next person
+          moves faster.</p>
         <div class="actions">
           <a class="btn primary" href="assets/Ross_Kahn_Resume_Styled.pdf" target="_blank" rel="noopener">View resume
             <small>styled ↗</small></a>
@@ -53,36 +54,39 @@
         <article class="card">
           <p class="label">Panorama Education · AI</p>
           <h3>AI Survey Insights</h3>
-          <p>One of Panorama's first user-facing AI features. It surfaces the most actionable findings in large survey
-            datasets, weighs scores against national benchmarks and past results, and links every insight back to its
-            source data. I tested output with Product, Data Science and Design for accuracy and neutral tone, because
-            educators act on it.</p>
-          <p class="out">Large district clients who were wary of AI said they were "very impressed."</p>
+          <p>One of Panorama's first user-facing AI features. It pulls the most useful findings out of large survey
+            datasets, compares them to national benchmarks and past results, and links each one back to its source data.
+            Prompt quality was the big unknown, so I got a working version into staging early and reviewed output with
+            Product, Data Science and Design for accuracy and neutral tone while the rest was built.</p>
+          <p class="out">Won over several large district clients that had been wary of AI.</p>
         </article>
         <article class="card">
           <p class="label">Panorama Education · Reliability</p>
           <h3>Reporting stability</h3>
-          <p>The flagship reporting product was hitting urgent issues about weekly from a third-party analytics engine.
-            As incident commander, I used AI to learn the engine's internals quickly, then fixed the root cause by
-            combining redundant requests and cutting unnecessary traffic.</p>
-          <p class="out">No comparable incident in the months that followed; recognized by engineering leadership.</p>
+          <p>Our integration layer for Qlik, a third-party analytics platform, was causing urgent sev-1 incidents more
+            than four times a month. As incident commander, I used AI to quickly learn how both the integration layer
+            and Qlik worked under the hood, then stabilized it by combining redundant requests, cutting unnecessary
+            traffic, and optimizing call ordering.</p>
+          <p class="out">That kind of incident stopped entirely, buying the team time to move to a more stable data layer.
+            Engineering leadership called it out as an innovative use of AI.</p>
         </article>
         <article class="card">
           <p class="label">Epic Systems · Clinical</p>
           <h3>Vaccine inventory rebuild</h3>
-          <p>A major clinic customer was considering uninstalling Epic's vaccine inventory tool. I made the case for
-            rebuilding it on a separate inventory platform, split the work so a growing team could build in parallel,
-            and wrote the data conversion and rollback utilities myself.</p>
-          <p class="out">Shipped February 2022; the same customer praised the "incredible improvements."</p>
+          <p>A major clinic customer was considering uninstalling Epic's vaccine inventory tool. I researched the
+            options, proposed rebuilding it on Epic's more robust pharmacy inventory system, and pitched the plan to
+            leadership on both teams. Then I led and mentored a growing team through the rebuild and wrote the data
+            conversion and rollback tools myself.</p>
+          <p class="out">Shipped February 2022, during the COVID-19 vaccine rollout. The customer praised the improvements,
+            calling them "incredible."</p>
         </article>
         <article class="card">
           <p class="label">Epic Systems · Clinical</p>
-          <h3>Medication record, desktop to web</h3>
-          <p>Key developer on moving the medication administration record to the web, one of Epic's largest projects. I
-            redesigned data loading to one database call per screen, designed and ran the usability study; and planned a
-            thorough QA process that caught 93 issues internally, then owned
-            resolving them before customers ever saw them.</p>
-          <p class="out">93 defects resolved in six months after release.</p>
+          <h3>Medication record, legacy to web</h3>
+          <p>I was project lead for moving the outpatient medication administration record, one of Epic's largest
+            projects, from a legacy front end to the web. I reworked data loading so each screen needs a single database
+            call, speeding up load times, and designed and ran the usability study.</p>
+          <p class="out">Planned the QA process that caught 93 issues before release, and owned the fixes.</p>
         </article>
       </div>
     </section>
@@ -94,22 +98,22 @@
       </div>
       <div class="path">
         <div class="stop">
-          <p class="when">2022 – now</p>
+          <p class="when">2022 – 2026</p>
           <div>
             <h3>Panorama Education <span class="title">· Lead Software Engineer</span></h3>
-            <p>K-12 analytics platform. Rails, Vue and TypeScript on the flagship survey reporting product, plus AI
-              feature work and the playbooks the department uses to onboard tech leads, roll back safely, and debug with
-              LLMs.</p>
-            <div class="ladder"><span>Project Tech Lead</span><span>Theme Lead</span><span>Org-wide technical
-                advisor</span></div>
+            <p>K-12 analytics platform. Rails, Vue and TypeScript on the flagship survey reporting product, including
+              co-leading Enhanced Survey Reporting, a full rebuild across two teams, and leading the move to a new
+              Malloy data layer. Also AI feature work and playbooks used across all of engineering to onboard tech
+              leads, roll back safely, and debug with LLMs.</p>
+            <div class="ladder"><span>Senior IC</span><span>Full-stack lead engineer</span></div>
           </div>
         </div>
         <div class="stop">
           <p class="when">2014 – 2022</p>
           <div>
             <h3>Epic Systems <span class="title">· Senior Software Engineer</span></h3>
-            <p>Safety-critical clinical software across the full stack, from M (MUMPS) database code to C#/.NET and
-              TypeScript front ends. Led usability studies and design reviews, and received Epic's 2020 Vision award for
+            <p>Safety-critical clinical software across the stack, from M (MUMPS) database code to C#/.NET and
+              TypeScript/JavaScript web front ends. Led usability studies and design reviews, and received Epic's 2020 Vision award for
               COVID-19 vaccination work.</p>
           </div>
         </div>
@@ -117,7 +121,7 @@
           <p class="when">2013</p>
           <div>
             <h3>Insight Lab <span class="title">· Assistant Director</span></h3>
-            <p>Led lab staff, re-engineered science-education software, and built a staff management web app.</p>
+            <p>Managed lab staff, rebuilt the lab's science-education software, and built a staff management web app.</p>
           </div>
         </div>
         <div class="stop">
@@ -150,8 +154,8 @@
         </div>
         <div>
           <h3>Leaving things better documented</h3>
-          <p>When I figure something out the hard way, I write it down: playbooks, diagnostic tools, and patterns other
-            engineers build on.</p>
+          <p>When I figure something out the hard way, I write it down. I write the playbooks and set up the processes
+            that help teams ramp up faster and solve problems on their own.</p>
         </div>
         <div>
           <h3>Work that matters</h3>
@@ -204,7 +208,6 @@
             <li>Mentorship</li>
             <li>Incident command</li>
             <li>Usability testing</li>
-            <li>DEIB initiatives</li>
           </ul>
         </div>
       </div>
